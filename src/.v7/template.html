@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<!--
+VEYNHOLD — CHANGELOG
+v7 — visual overhaul (presentation only; combat core untouched; tests 72 / 42 / 29 unchanged)
+  • Lighting: ACES filmic tone mapping, sRGB output, tuned exposure; one combined post pass (render target + fullscreen quad):
+    half-res bloom (Medium: 1 level, High: 2 levels), vignette, film grain, cold moonlit grade, screen punch / flash. Low renders direct (v6 cost).
+  • Rim / fresnel light on every fighter; steel reflects a procedural moonlit environment (PMREM; Medium/High).
+  • Arena: ruined castle courtyard — crenellated curtain wall with breaches, gate towers + broken arch + portcullis teeth, stairs to a terrace,
+    wind-swept banners (vertex shader), dead trees, sky dome, three layered mountain ridges, stars, moon + halo.
+    Flagstone / ashlar canvas textures with generated normal maps (bump on Low), moss, wet puddles that catch torch and moon light.
+  • Atmosphere: GPU falling ash, drifting fog banks, embers; in King Phase II the moon, sky, fog and grade turn blood-red.
+  • Characters: duelist sash (verlet), distinct silhouettes (Duelist plumed hat, Warden spiked pauldrons + horns, False Brother mask + hood,
+    King blade crown + halo + fur mantle), white-hot sword edge on a perfect deflect.
+  • VFX: streak sparks + glare + screen punch on deflects, posture-break flash, deathblow slow-mo with letterbox, desaturation and orbit camera,
+    stylized ink-splash hits with fading stains (Hits: Ink / Blood toggle on title and pause; default Ink).
+  • UI: new title layout + VEYNHOLD logo, boss name cards, polished posture bars, custom danger rune (no kanji), system font stacks.
+  • Persistence key veynhold_v7 (migrates veynhold_v6 on first load). All new looks are in VISUAL / the Tune panel.
+v6 — content, feel, ship-ready UX
+  • Graduated deflects: PERFECT (pressed ≤40 ms before the strike, never on a mashed press) / GOOD / LATE (grace frames).
+    Perfect = +15% enemy posture, +4 own posture recovered, longer hit-stop; distinct sound, flash, ring and FOV punch.
+  • Practice Dummy: the Training Shade loops readable strings plus one thrust, sweep and grab; never counters or branches.
+    Keys 1 perilous only · 2 Shade guards · 3 pause swings · 4 cadence. "Practice this foe" from death/victory borrows that foe's look and moves.
+  • Coach: reactive one-liners (too early, tap don't hold, how to answer each perilous, deathblow prompt) in practice and the first Duelist fight
+    (soft tutorial: 20 s, enemy windups 25% slower, remembered once seen).
+  • Audio: pressure-driven combat drone bed, reverb send, perfect/execution/phase/death stingers, stereo pan by contact side, enemy footsteps, mute when hidden.
+  • Content: "Blade and Wall" (Duelist + Iron Warden); Mirror challenge (-20% health and posture); Crimson Arc ground warning 0.3 s before release.
+  • Post-fight breakdown (perfect/good/late, damage, early presses, Counterstep/Trample, deathblows) and an S/A/B/C grade.
+  • Persistence (localStorage "veynhold_v6"): quality, volume, large window, hints, mirror, best time/grade per encounter, tutorial seen.
+  • Gamepad (standard mapping, deadzone 0.18): sticks move/camera · A light · X heavy (hold = charged) · B dodge · LT jump · RB/RT deflect & guard
+    · LB/R3 lock · d-pad switch target · Y deathblow · Start pause · Back restart.
+  • Adaptive quality: one automatic step down per session if play stays under 40 fps for 2 s (toast shown).
+  • Ground contact: crouched stances and kneels pin feet/knees to the floor (foot drift 22 cm → 4 cm).
+  • New CONFIG: parry.perfectWindow, parry.perfectPostureBonus, parry.perfectSelfRecover, parry.hitStop.perfect; trainer profile; fighter.tempoMult.
+  • Deferred: key rebinding, touch controls.
+v5 — 4-hit chain, finishers, riposte, dash/run/air attacks; per-enemy stances and deathblows; King Phase II Crimson Arc + block chip.
+v4 — rigged GLB characters with retargeting, hit flash, Phase II cracks.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VEYNHOLD</title>
+<!--VEYN_CHECKLIST-->
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;height:100%;overflow:hidden;background:#07080a;color:#d9cfbd;font-family:Georgia,'Times New Roman',serif;user-select:none;-webkit-user-select:none}
+#c{position:fixed;inset:0;width:100%;height:100%;display:block;outline:none;cursor:crosshair}
+.hud{position:fixed;pointer-events:none;z-index:5}
+#hudPlayer{left:28px;bottom:26px;width:330px}
+.bname{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#bfb29a;margin-bottom:5px;text-shadow:0 1px 3px #000}
+.bar{position:relative;height:9px;background:rgba(10,8,8,.7);border:1px solid rgba(201,176,120,.45);margin-bottom:7px;overflow:hidden}
+.bar i{position:absolute;left:0;top:0;bottom:0;display:block}
+.hp i{background:linear-gradient(#b3222a,#6d1015)}
+.hp .lag{background:#e8d7b5;opacity:.55}
+.post{height:7px;border-color:rgba(201,176,120,.3);background:rgba(10,8,8,.45)}
+.post i{left:50%;transform:translateX(-50%);background:linear-gradient(90deg,#d9a441,#f0d68a,#d9a441)}
+.post.hot i{background:linear-gradient(90deg,#d85a1e,#ffb347,#d85a1e)}
+.post.crit i{background:linear-gradient(90deg,#c81e1e,#ff7a3d,#c81e1e)}
+#hudTarget{top:22px;left:50%;transform:translateX(-50%);width:520px;text-align:center;display:none}
+#tName{font-size:16px;letter-spacing:.22em;text-transform:uppercase;color:#e3d5b8;text-shadow:0 2px 6px #000}
+#tPhase{font-size:11px;letter-spacing:.3em;color:#c0392b;height:14px;margin:2px 0 5px}
+#tMarks{display:inline-flex;gap:6px;margin-left:10px;vertical-align:middle}
+#tMarks b{width:9px;height:9px;border-radius:50%;background:#a3141b;box-shadow:0 0 6px #ff3b30;display:inline-block}
+#tMarks b.spent{background:#2b1b1b;box-shadow:none;border:1px solid #5a2a2a}
+#flash{top:36%;left:50%;transform:translate(-50%,-50%);font-size:44px;letter-spacing:.35em;font-weight:bold;opacity:0;text-shadow:0 0 18px rgba(0,0,0,.9);white-space:nowrap}
+#reticle{width:16px;height:16px;margin:-8px 0 0 -8px;border:2px solid rgba(255,235,200,.9);border-radius:50%;display:none;box-shadow:0 0 6px rgba(0,0,0,.8)}
+#danger{font-size:46px;color:#ff2a1f;font-weight:bold;margin:-30px 0 0 -23px;display:none;text-shadow:0 0 14px #ff0000,0 0 2px #000;font-family:'Noto Serif CJK JP','Yu Mincho',serif}
+#dbDot{width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;background:radial-gradient(#ff4b3a,#8b0000);box-shadow:0 0 18px 6px rgba(255,30,20,.7);display:none}
+#dbHint{margin:16px 0 0 -60px;width:120px;text-align:center;font-size:12px;letter-spacing:.2em;color:#ffb1a8;display:none}
+#hints{right:22px;bottom:22px;font-size:12px;line-height:1.65;color:#a89c86;background:rgba(8,8,10,.55);border:1px solid rgba(201,176,120,.25);padding:10px 14px}
+#hints b{color:#e5d3ad;font-weight:normal;display:inline-block;min-width:74px}
+#debug{left:12px;top:12px;pointer-events:none;font:11px/1.45 monospace;color:#9fe6a0;background:rgba(0,0,0,.72);padding:8px 10px;white-space:pre;display:none;max-width:560px}
+#pbar{position:relative;width:240px;height:10px;background:#222;margin-top:4px;border:1px solid #555}
+#pbar span{position:absolute;top:0;bottom:0}
+#dbgTools{margin-top:6px}#dbgTools .tog{pointer-events:auto}
+#vign{position:fixed;inset:0;pointer-events:none;z-index:1;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 58%,rgba(0,0,0,.5) 100%)}
+#pulse{position:fixed;inset:0;pointer-events:none;z-index:1;opacity:0}
+@keyframes dpulse{0%{transform:scale(1)}50%{transform:scale(1.18)}100%{transform:scale(1)}}#danger{animation:dpulse .32s ease-in-out infinite}
+.bar.post.crit i{animation:pcrit .4s ease-in-out infinite alternate}@keyframes pcrit{from{filter:brightness(1)}to{filter:brightness(1.6)}}
+#tune{max-height:92vh;overflow-y:auto}
+#dangerLbl{font:bold 11px Georgia,serif;letter-spacing:.2em;color:#ffb1a8;text-align:center;margin-left:-30px;width:110px}
+#tune{position:fixed;right:14px;top:14px;z-index:20;width:330px;display:none;background:rgba(10,9,8,.92);border:1px solid rgba(201,176,120,.45);padding:12px 14px;font-size:12px;color:#d6c8aa}
+#tune .th{letter-spacing:.2em;color:#f0d68a;margin-bottom:8px}#tune .th span{letter-spacing:0;color:#8f846f;font-size:11px}
+#tune label{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:5px 0}#tune label input[type=range]{width:120px}#tune label b{width:42px;text-align:right;font-weight:normal;color:#f0d68a;font-family:monospace}
+#tune label.chk{justify-content:flex-start}
+#chargeRing{left:50%;bottom:110px;margin-left:-40px;width:80px;height:4px;background:rgba(255,255,255,.1);display:none}
+#chargeRing i{display:block;height:100%;background:#f0d68a;width:0}
+.ov{position:fixed;inset:0;z-index:10;display:none;align-items:center;justify-content:center;background:radial-gradient(ellipse at center,rgba(12,10,10,.72),rgba(0,0,0,.94))}
+.ov.show{display:flex}
+.panel{text-align:center;max-width:760px;padding:30px 40px}
+h1{font-size:76px;letter-spacing:.32em;font-weight:normal;color:#e6d8bb;text-shadow:0 0 30px rgba(150,20,20,.45);margin-right:-.32em}
+.sub{letter-spacing:.42em;font-size:13px;color:#a8343a;margin:10px 0 30px;text-transform:uppercase}
+.btn{pointer-events:auto;display:block;width:330px;margin:8px auto;padding:11px 0;background:rgba(20,16,14,.85);border:1px solid rgba(201,176,120,.45);color:#e0d2b6;font:15px Georgia,serif;letter-spacing:.14em;cursor:pointer;text-transform:uppercase}
+.btn:hover,.btn:focus{background:rgba(110,20,22,.6);border-color:#d9a441;outline:none}
+.btn small{display:block;font-size:10px;color:#9c8f78;letter-spacing:.1em;margin-top:3px;text-transform:none}
+.row{display:flex;gap:14px;justify-content:center;align-items:center;margin-top:16px;font-size:13px;color:#b8ab93}
+.row input[type=range]{width:130px;pointer-events:auto}
+.tog{pointer-events:auto;padding:6px 12px;background:rgba(20,16,14,.85);border:1px solid rgba(201,176,120,.35);color:#d6c8aa;font:12px Georgia,serif;cursor:pointer}
+.big{font-size:64px;letter-spacing:.4em;margin-right:-.4em}
+#deathTitle{color:#b3141c;text-shadow:0 0 30px #600}
+#winTitle{color:#e6c46a;text-shadow:0 0 30px rgba(230,180,90,.5)}
+.stats{margin:16px 0 22px;color:#b6a98f;font-size:15px;line-height:1.8}
+#tut .panel{max-width:860px;text-align:left}
+#tut h2{text-align:center;letter-spacing:.3em;font-weight:normal;margin-bottom:14px;color:#e6d8bb}
+.cols{display:flex;gap:30px;font-size:14px;line-height:1.7;color:#cdbfa4}
+.cols div{flex:1}
+.cols b{color:#f0d68a;font-weight:normal}
+.k{display:inline-block;min-width:22px;padding:0 5px;border:1px solid #8a7a5a;border-radius:3px;font-size:12px;text-align:center;color:#f2e6c8;margin-right:4px;background:#1a1612}
+#err{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:50;background:#000;color:#e6c46a;font-size:18px;text-align:center;padding:40px}
+#chain{margin-top:6px;font:600 13px Georgia,serif;letter-spacing:4px;color:#e6d8bb;opacity:0;transition:opacity .25s;text-shadow:0 0 6px #000}#chain.fin{color:#ffd890}
+.ver{font-size:14px;letter-spacing:3px;color:#b9a77f;vertical-align:middle}.flavor{font:italic 14px Georgia,serif;color:#a99d86;margin:4px 0 10px}
+.best{display:block;font-size:11px;color:#d9b35c;letter-spacing:1px;margin-top:2px}
+#coach{position:fixed;left:50%;bottom:21%;transform:translateX(-50%);font:600 19px Georgia,serif;color:#f1e6cc;text-shadow:0 0 8px #000,0 0 3px #000;opacity:0;transition:opacity .25s;pointer-events:none;text-align:center;white-space:nowrap}
+#practice{position:fixed;right:18px;bottom:18px;font:12px/1.6 Georgia,serif;color:#cfc3a8;text-shadow:0 0 4px #000;display:none;text-align:right}#practice b{color:#ffd890}
+#toast{position:fixed;top:14px;left:50%;transform:translateX(-50%);background:rgba(20,16,12,.85);border:1px solid #6b5a3c;color:#e6d8bb;font:13px Georgia,serif;padding:6px 14px;opacity:0;transition:opacity .4s;pointer-events:none;z-index:50}
+.grade{font:700 54px Georgia,serif;color:#ffd890;margin:6px 0}.stats table{margin:8px auto;border-collapse:collapse}.stats td{padding:2px 12px;text-align:left;font-size:14px}.stats td+td{text-align:right;color:#f1e6cc}
+
+/* ===== v7 UI pass: system font stacks, title + logo, name card, posture polish, rune, letterbox ===== */
+:root{--serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua","Noto Serif",Georgia,"Times New Roman",serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",Arial,sans-serif;--bone:#e8dcc2;--gold:#d9b35c;--blood:#b3141c}
+html,body{font-family:var(--serif)}
+input[type=range]{accent-color:#b3141c}
+.btn,.tog,#flash,#coach,#practice,#toast,#chain,#dangerLbl,.flavor,.grade{font-family:var(--serif)}
+.bname,#tName,#tPhase,.sub,.btn small,.row,#hints,#dbHint,.best,label.chk,.ver{font-family:var(--sans)}
+#flash{font-weight:600;letter-spacing:.42em;text-shadow:0 0 22px rgba(0,0,0,.95),0 0 3px #000}
+/* bars */
+.bar{height:8px;border:1px solid rgba(214,190,140,.38);background:linear-gradient(rgba(14,10,10,.82),rgba(4,3,3,.82));box-shadow:0 1px 6px rgba(0,0,0,.6),inset 0 0 0 1px rgba(0,0,0,.6)}
+.hp i{background:linear-gradient(#c8323a,#7a1218 60%,#5a0c10)}
+.bar.post{height:7px;overflow:visible}
+.bar.post::before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(90deg,transparent 24.8%,rgba(0,0,0,.65) 25%,transparent 25.4%,transparent 74.6%,rgba(0,0,0,.65) 75%,transparent 75.2%)}
+.bar.post::after{content:"";position:absolute;left:50%;top:-3px;bottom:-3px;width:2px;margin-left:-1px;background:rgba(240,214,138,.75);box-shadow:0 0 6px rgba(240,214,138,.8);z-index:3}
+.post i{background:linear-gradient(90deg,#9a6a22,#f3d88f 50%,#9a6a22);box-shadow:0 0 8px rgba(240,200,110,.45);transition:width .08s linear}
+.post.hot i{background:linear-gradient(90deg,#b2471a,#ffc060 50%,#b2471a);box-shadow:0 0 10px rgba(255,150,60,.65)}
+.post.crit i{background:linear-gradient(90deg,#a3141b,#ff8a4a 50%,#a3141b);box-shadow:0 0 14px rgba(255,60,30,.85)}
+.bar.post.crit{animation:pshake .12s linear infinite}@keyframes pshake{0%{transform:translateX(0)}25%{transform:translateX(-1px)}75%{transform:translateX(1px)}}
+.bar.post.broke{animation:pbroke .55s ease-out}@keyframes pbroke{0%{box-shadow:0 0 0 2px #fff,0 0 30px 10px rgba(255,200,90,.9)}100%{box-shadow:0 1px 6px rgba(0,0,0,.6)}}
+#tName{font-family:var(--serif);font-size:17px;letter-spacing:.3em}
+/* danger rune */
+#danger{margin:-30px 0 0 -26px;font-size:0;animation:dpulse .32s ease-in-out infinite}
+.rune{width:52px;height:52px;display:block;filter:drop-shadow(0 0 6px #ff1a10) drop-shadow(0 0 2px #000);overflow:visible}
+.rune .r1{fill:rgba(90,0,0,.45);stroke:#ff2a1f;stroke-width:4;stroke-linejoin:miter}.rune .r2{stroke:#ffd0c0;stroke-width:5;stroke-linecap:square;fill:none}.rune .r3{fill:#ffd0c0}
+.rune.inl{display:inline-block;width:22px;height:22px;vertical-align:-5px;filter:drop-shadow(0 0 3px #ff1a10)}
+#dangerLbl{margin:4px 0 0 -29px}
+/* letterbox for deathblow cinematics */
+#lbox{position:fixed;inset:0;pointer-events:none;z-index:4}#lbox i{position:absolute;left:0;right:0;height:0;background:#000;transition:height .35s cubic-bezier(.2,.8,.2,1)}#lbox i:first-child{top:0}#lbox i:last-child{bottom:0}#lbox.on i{height:10.5vh}
+/* boss name card */
+#nameCard{position:fixed;left:50%;top:27%;transform:translate(-50%,-50%);text-align:center;pointer-events:none;z-index:6;opacity:0;width:min(96vw,1100px)}
+#ncName{font:600 clamp(20px,3.1vw,40px) var(--serif);white-space:nowrap;letter-spacing:.42em;margin-right:-.42em;color:var(--bone);text-transform:uppercase;text-shadow:0 0 28px rgba(0,0,0,.95),0 0 3px #000}
+#nameCard.boss #ncName{color:#f0e2c4;text-shadow:0 0 30px rgba(140,10,10,.75),0 0 3px #000}
+#ncEpi{font:italic clamp(13px,1.6vw,18px) var(--serif);color:#b9ab90;letter-spacing:.12em;margin-top:6px;text-shadow:0 0 10px #000}
+.ncRule{height:1px;margin:12px auto;width:0;background:linear-gradient(90deg,transparent,rgba(217,179,92,.85),transparent)}
+/* title */
+#title{background:radial-gradient(ellipse at 70% 50%,rgba(6,7,10,.35),rgba(0,0,0,.82)),linear-gradient(90deg,rgba(0,0,0,.7),rgba(0,0,0,.15) 55%,rgba(0,0,0,.55));overflow:auto}
+.titleWrap{display:flex;align-items:center;justify-content:center;gap:clamp(24px,5vw,80px);width:100%;max-width:1240px;padding:3vh 4vw;min-height:100%}
+.logoCol{flex:1 1 52%;text-align:left;min-width:320px}
+.menuCol{flex:0 1 380px;display:flex;flex-direction:column;gap:clamp(4px,.9vh,8px)}
+.logo{position:relative;display:inline-block;padding:0 .1em}
+.logoTxt{position:relative;display:block;font:600 clamp(40px,6.3vw,96px)/1 var(--serif);letter-spacing:.14em;margin-right:-.14em;color:#d8dde6;
+  background:linear-gradient(180deg,#f4f6fa 0%,#c7ccd6 46%,#7f8794 52%,#b7bcc6 70%,#edeff3 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  filter:drop-shadow(0 2px 0 rgba(0,0,0,.9)) drop-shadow(0 0 24px rgba(160,20,20,.35))}
+.slash{position:absolute;left:-4%;right:-6%;top:52%;height:clamp(6px,.9vw,12px);transform:rotate(-7deg);background:linear-gradient(90deg,transparent,#7a0a10 12%,#c8141e 55%,#ff3a2a 72%,transparent);box-shadow:0 0 18px rgba(255,30,20,.55);border-radius:50%;opacity:.95}
+.logoRule{display:flex;align-items:center;gap:12px;width:min(520px,90%);margin:clamp(10px,2vh,18px) 0 6px}.logoRule i{flex:1;height:1px;background:linear-gradient(90deg,rgba(217,179,92,0),rgba(217,179,92,.8))}.logoRule i:last-child{background:linear-gradient(90deg,rgba(217,179,92,.8),rgba(217,179,92,0))}
+.logoRule b{width:9px;height:9px;transform:rotate(45deg);border:1px solid var(--gold);background:#5a0c10}
+.logoCol .sub{text-align:left;margin:10px 0 8px;letter-spacing:.5em;font-size:12px;color:#c0404a}
+.logoCol .flavor{text-align:left;margin:0 0 14px}
+.logoCol .row{justify-content:flex-start;margin-top:10px;flex-wrap:wrap}
+.logoCol label.chk{display:block;margin-top:12px;font-size:12px;color:#a99d86;pointer-events:auto}
+.logoCol .ver{display:block;margin-top:16px;font-size:11px;letter-spacing:.3em;color:#7f735e;text-transform:uppercase}
+.menuCol .btn{width:100%;margin:0;padding:clamp(6px,1.05vh,10px) 14px;text-align:left;font-size:clamp(12px,1.5vh,14px);letter-spacing:.16em;background:linear-gradient(90deg,rgba(18,14,12,.88),rgba(18,14,12,.55));border:1px solid rgba(201,176,120,.28);border-left:2px solid rgba(201,176,120,.55);transition:background .15s,border-color .15s,padding-left .15s}
+.menuCol .btn small{font-size:clamp(9px,1.25vh,11px);letter-spacing:.04em;margin-top:2px;color:#8f846e}
+.menuCol .btn:hover,.menuCol .btn:focus{padding-left:20px;background:linear-gradient(90deg,rgba(120,18,22,.75),rgba(40,10,10,.4));border-color:rgba(217,179,92,.7)}
+.menuCol .btn.boss{border-left-color:#c8141e}
+.menuCol .btn .best{display:inline-block;margin:0 0 0 10px;float:right}
+.tog{font-family:var(--sans);font-size:12px;letter-spacing:.06em;border-color:rgba(201,176,120,.3);background:rgba(16,13,11,.8)}.tog:hover{border-color:var(--gold)}
+@media (max-width:860px){.titleWrap{flex-direction:column;gap:14px}.logoCol{text-align:center}.logoCol .row,.logoCol .sub,.logoCol .flavor{justify-content:center;text-align:center}.logoRule{margin:10px auto}.menuCol{width:min(420px,92vw)}}
+</style>
+</head>
+<body>
+<canvas id="c" tabindex="0"></canvas>
+<div id="hudPlayer" class="hud" style="display:none">
+  <div class="bname">Wanderer</div>
+  <div class="bar hp"><i class="lag" id="pHpLag"></i><i id="pHp"></i></div>
+  <div class="bar post" id="pPostBar"><i id="pPost"></i></div>
+  <div id="chain"></div>
+</div>
+<div id="hudTarget" class="hud">
+  <div><span id="tName"></span><span id="tMarks"></span></div>
+  <div id="tPhase"></div>
+  <div class="bar hp"><i class="lag" id="tHpLag"></i><i id="tHp"></i></div>
+  <div class="bar post" id="tPostBar" style="width:70%;margin:0 auto"><i id="tPost"></i></div>
+</div>
+<div id="flash" class="hud"></div>
+<div id="coach" class="hud"></div>
+<div id="practice" class="hud"></div>
+<div id="toast"></div>
+<div id="reticle" class="hud"></div>
+<div id="vign"></div><div id="pulse"></div>
+<div id="danger" class="hud"><svg class="rune" viewBox="0 0 64 64" aria-label="perilous attack"><path class="r1" d="M32 3 L44 20 L61 32 L44 44 L32 61 L20 44 L3 32 L20 20 Z"/><path class="r2" d="M32 13 L32 41 M24 36 L40 36"/><circle class="r3" cx="32" cy="50" r="3.2"/></svg><div id="dangerLbl"></div></div>
+<div id="lbox"><i></i><i></i></div>
+<div id="nameCard"><div class="ncRule"></div><div id="ncName"></div><div id="ncEpi"></div><div class="ncRule"></div></div>
+<div id="dbDot" class="hud"></div>
+<div id="dbHint" class="hud">E — DEATHBLOW</div>
+<div id="chargeRing" class="hud"><i></i></div>
+<div id="hints" class="hud" style="display:none">
+<b>WASD</b>move &nbsp; <b>Shift</b>sprint<br><b>Mouse / ←→↑↓</b>camera &nbsp; <b>Q</b>lock on<br><b>J / LMB</b>light (×4) &nbsp; <b>K / hold LMB</b>heavy<br><b>J…K</b>finisher &nbsp; <b>K after deflect</b>riposte<br><b>F / RMB</b>tap deflect, hold guard<br><b>Space</b>dodge &nbsp; <b>C</b>jump &nbsp; <b>E</b>deathblow<br><b>Perfect</b> = press within 40 ms of the hit<br><b>Gamepad</b>: A light · X heavy · B dodge · LT jump<br>RB/RT deflect · LB lock · Y deathblow · Start pause<br><b>R</b>restart &nbsp; <b>Esc / P</b>pause &nbsp; <b>H</b>hide
+</div>
+<div id="debug" class="hud"><div id="dbgText"></div><div id="dbgTools" style="display:none"><button class="tog" id="tuneBtn">Tune feel (T)</button></div></div>
+<div id="tune"><div class="th">TUNE FEEL <span>(writes CONFIG live)</span></div><div id="tuneRows"></div><label class="chk"><input type="checkbox" id="tuneLarge"> Large deflect window (accessibility)</label><div class="row" style="margin-top:8px"><button class="tog" id="tuneReset">Reset</button><button class="tog" id="tuneClose">Close</button></div></div>
+
+<div id="title" class="ov show"><div class="titleWrap">
+  <div class="logoCol">
+    <div class="logo"><span class="slash"></span><span class="logoTxt">VEYNHOLD</span></div>
+    <div class="logoRule"><i></i><b></b><i></i></div>
+    <div class="sub">Read. Deflect. Break. Finish.</div><div class="flavor">The oath is broken. Its keepers still stand in the yard.</div>
+    <div class="row"><button class="tog" id="tutBtn">How to fight</button><button class="tog" id="qualBtn">Quality: Medium</button><button class="tog" id="hitBtn">Hits: Ink (stylized)</button></div>
+    <div class="row"><span>Volume</span><input type="range" id="vol" min="0" max="100" value="70"></div>
+    <label class="chk"><input type="checkbox" id="mirrorChk"> Mirror challenge — 20% less health and posture</label>
+    <div class="ver">v7 · Enter = practice</div>
+  </div>
+  <div class="menuCol">
+  <button class="btn" data-enc="practice">Practice Dummy<small>A patient Training Shade — learn every tell, with a coach</small></button>
+  <button class="btn" data-enc="duelist">The Duelist<small>Measured combos, punishes careless swings</small></button>
+  <button class="btn" data-enc="warden">The Iron Warden<small>Slow, crushing, armored — sweeps and grabs</small></button>
+  <button class="btn" data-enc="brother">The False Brother<small>Feints, delayed strikes, reads early deflects</small></button>
+  <button class="btn" data-enc="pair">Two Oathbreakers<small>Duelist and False Brother — Tab to switch target</small></button>
+  <button class="btn" data-enc="duowarden">Blade and Wall<small>Duelist and Iron Warden together</small></button>
+  <button class="btn boss" data-enc="king">The King's First Blade<small>Two-phase boss</small></button>
+  <button class="btn" data-enc="gauntlet">Gauntlet<small>All three, then the King</small></button>
+  </div>
+</div></div>
+
+<div id="pause" class="ov"><div class="panel">
+  <div class="big">PAUSED</div><div id="pauseInfo" class="flavor"></div><br>
+  <button class="btn" id="resumeBtn">Resume</button>
+  <button class="btn" id="restartBtn">Restart encounter (R)</button>
+  <button class="btn" id="tutBtn2">How to fight</button>
+  <button class="btn" id="quitBtn">Quit to title</button>
+  <div class="row"><button class="tog" id="accBtn">Large deflect window: Off</button><button class="tog" id="tuneBtn2">Tune feel</button><button class="tog" id="hitBtn2">Hits: Ink (stylized)</button></div>
+  <div class="row"><button class="tog" id="dbgBtn">Debug: Off</button><button class="tog" id="qualBtn2">Quality: Medium</button>
+  <span>Volume</span><input type="range" id="vol2" min="0" max="100" value="70"></div>
+</div></div>
+
+<div id="dead" class="ov"><div class="panel">
+  <div class="big" id="deathTitle">DEATH</div><div class="stats" id="deadStats"></div>
+  <button class="btn" id="retryBtn">Try again (R)</button><button class="btn" id="practiceBtn">Practice this foe</button><button class="btn" id="quitBtn2">Quit to title</button>
+</div></div>
+
+<div id="win" class="ov"><div class="panel">
+  <div class="big" id="winTitle">VICTORY</div><div class="stats" id="winStats"></div>
+  <button class="btn" id="nextBtn" style="display:none">Next foe</button>
+  <button class="btn" id="againBtn">Fight again (R)</button><button class="btn" id="practiceBtn2">Practice this foe</button><button class="btn" id="quitBtn3">Quit to title</button>
+</div></div>
+
+<div id="tut" class="ov"><div class="panel">
+  <h2>HOW TO FIGHT</h2>
+  <div class="cols"><div>
+  <b>Deflect is everything.</b> Press <span class="k">F</span> (or right mouse) as the enemy blade lands. Pressing guard opens a deflect window of about 0.2 s, and you get a few frames of grace even if you're a hair late. A perfect deflect rings bright, costs no health, restores a little posture and cracks the enemy's.<br><br>
+  <b>Keep holding</b> and you block: safe, but it fills <i>your</i> posture. Tapping in rhythm with each swing is the intended style. Frantic mashing (4+ presses a second) shrinks your window until your next clean deflect.<br><br>
+  <b>Posture</b> (the gold bar) breaks when full. Break the enemy's and a red dot appears: press <span class="k">E</span> for a deathblow.<br><br>
+  <svg class="rune inl" viewBox="0 0 64 64"><path class="r1" d="M32 3 L44 20 L61 32 L44 44 L32 61 L20 44 L3 32 L20 20 Z"/><path class="r2" d="M32 13 L32 41 M24 36 L40 36"/><circle class="r3" cx="32" cy="50" r="3.2"/></svg> (the red rune) means a perilous attack. <b>Thrust</b>: deflect it, or dodge <i>into</i> it for a Counterstep posture break. <b>Sweep</b>: jump <span class="k">C</span>, then attack in mid-air to trample them. <b>Grab</b>: dodge it and they're left wide open.<br><br>A <b>white glint</b> on a blade means a delayed strike is releasing now; feints never glint. A low drum marks the last swing of a string. In his second phase the King's <b>Crimson Arc</b> travels the ground: deflect, dodge through, or jump it — and blocking his blade bleeds you.
+  </div><div>
+  <span class="k">W</span><span class="k">A</span><span class="k">S</span><span class="k">D</span> move · <span class="k">Shift</span> sprint<br>
+  Mouse (click canvas to capture) or drag / arrow keys — camera<br>
+  <span class="k">Q</span> lock on · <span class="k">Tab</span>/wheel switch target<br>
+  <span class="k">J</span> / left click — light attack (4-hit chain, 4th spins)<br>
+  <span class="k">K</span> heavy · hold left click — charged thrust<br>
+  <span class="k">J</span>…<span class="k">K</span> rising finisher · <span class="k">K</span> right after a deflect — riposte<br>
+  <span class="k">J</span> out of a dodge, while sprinting, or in the air — dash cut, running thrust, plunge<br>
+  <span class="k">F</span> / right mouse — tap deflect, hold guard<br>
+  <span class="k">Space</span> dodge (i-frames) · <span class="k">C</span> jump<br>
+  <span class="k">E</span> deathblow (J also works on the prompt)<br>
+  Gamepad: left stick move · right stick camera · A light · X heavy (hold = charged) · B dodge · LT jump · RB/RT deflect &amp; guard · LB lock (d-pad ←→ switch) · Y deathblow · Start pause<br>
+  <span class="k">R</span> restart · <span class="k">Esc</span>/<span class="k">P</span> pause · <span class="k">H</span> hints · <span class="k">`</span> debug<br><br>
+  <b>Perfect deflects</b> (pressed within 40 ms before the hit) ring white, crack more posture and restore yours. Mashed presses are never perfect. <b>Tip:</b> enemies vary their timing and change their strings mid-combo based on what you do. Learn the <i>tell</i> (the wind-up and the held tremble), not the clock. <span class="k">`</span> then <span class="k">T</span> opens the tuning panel.
+  </div></div>
+  <button class="btn" id="tutClose" style="margin-top:22px">Got it</button>
+</div></div>
+<div id="err"></div>
+<script>/*THREE*/</script>
+<script>/*LOADERS*/</script>
+<script>/*MODELS*/</script>
+<script>/*CORE*/</script>
+<script>/*GAME*/</script>
+</body>
+</html>

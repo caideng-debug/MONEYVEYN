@@ -1,0 +1,110 @@
+VEYNHOLD — Sekiro-inspired combat prototype, v2 "feel pass" (single self-contained file; Three.js r128 embedded, no network)
+
+ARCHITECTURE (kept): pure deterministic combat core (CONFIG / ATTACKS / PROFILES, seeded RNG, fixed 60 Hz ticks)
++ presentation layer (procedural rig + POSES, camera, FX, audio, HUD). The core never touches THREE or the DOM.
+
+V2 CHANGES
+[x] Parry reliability: window opens on guard PRESS, anchored to the visual strike frame, 70 ms late grace;
+    no spam shrink for rhythmic deflects (only 4+ presses/s, reset by any clean deflect); no swallowed presses;
+    0.18 s guard buffer that cancels out of attack recovery, dodge and the end of hit-stun; 240° deflect arc +
+    auto-turn to the nearest threat; feedback only on accepted presses; per-fighter hit-stop that never drops input.
+[x] Smoothness: accel/decel locomotion, speed-dependent turning, start lean + stop skid, everything visual
+    interpolated (position, facing, jump arc, attack/dodge timers), critically damped camera springs, smooth-noise shake,
+    FOV kicks, camera hold on hit-stop.
+[x] Animation: 5-key attack families (anticipation, windup, strike, overshoot, follow-through + damped settle),
+    root motion as a bell curve on the strike, per-joint springs, distance-driven gait (no foot slide), directional
+    hit reactions, distinct block recoil vs deflect snap, breathing / sway, dense sub-frame sword trails.
+[x] Perilous counters: thrust -> dodge into it (Counterstep posture break), sweep -> jump (+ mid-air trample),
+    grab -> dodge (whiff opening + posture recovery). AI defends by the same rules with human-like timing error.
+[x] Patterns: per-swing timing jitter + variable held windups, irregular-beat strings (1-7 hits), mid-string branches
+    (on deflect / dodge / back-off), deflect+jump+dodge mix-ups, footwork (side-steps, gap-closers, feint steps),
+    tempo modes (pressure / measured / patient), phase II tempo + new strings. Watchdog + token system kept.
+[x] Live tuning panel (` then T, or Pause > Tune feel), accessibility large deflect window.
+
+TESTED (headless: node for the core, jsdom + stub renderer for the full page)
+- 46/46 combat self-tests (also shown in the debug overlay), including: 4 rhythmic deflects in one string 0.55 s apart,
+  deflects with no lock-on facing 90° and 150° away, buffered presses from attack recovery / dodge / hit-stun,
+  ±50 ms human timing = 100% deflects, mashing never beats one good press, spam window resets on deflect,
+  hit-stop input buffering, jitter bounds, branching strings, 6-hit mix-up, Counterstep, trample, grab whiff,
+  identical outcomes at 30 / 60 / 144 fps, AI never stuck.
+- 35/35 input/flow checks with real key/mouse events, zero runtime errors, no leaks over repeated restarts.
+- Motion smoothness: on-screen position steps vary 0.0% frame to frame during steady movement at 144/60/30 fps.
+- Bot balance: an expert bot "dances" (~92-96% wins), a learner wins with damage, a first-timer bot loses the King
+  4 of 5; button-mashing wins 32% (mostly the Duelist), holding guard loses every fight.
+
+NOT VERIFIED
+- Real GPU frame rate on a Chromebook, final lighting/colors, audio mix: no WebGL browser was available in the build
+  sandbox. Use Pause > Quality: Low if it stutters.
+- Feel is tuned by numbers and bots, not by a human playing; the Tune panel exists for exactly that.
+
+V3 PRESENTATION PASS (core untouched)
+[x] Quality tiers High / Medium (default) / Low: pixel ratio, shadow map 2048/1024/off, torch lights 4/2/0, cloth on/on/off,
+    cloth iterations, debris count, ground mist, embers, particle counts.
+[x] Verlet cloth capes (4x7) and the Wanderer's scarf (2x5), pinned to the torso, kept behind the body, kicked by hits/dodges.
+[x] Additive impulse spring layer on the rig: tiered directional hits, block recoil, deflect snap / blade bounce, Counterstep,
+    trample, posture break, deathblow; exertion-driven breathing on torso, shoulders and head; turn-in-place shuffle.
+[x] Lighting: key (moon) + fill (hemi) + camera-relative rim, 4 flickering torches with halos and ground light pools.
+[x] Materials: canvas bump maps on stone, cloth weave, scratched armor roughness. Arena: blood/moss/scorch decals, banners,
+    fallen columns, spires, instanced debris, drifting mist.
+[x] Trails: 36 samples, colour by context (player steel / enemy warm / perilous orange / phase II crimson), brighter heavies.
+[x] Screen-edge pulses, cinematic slow-mo + camera focus on deathblows and breaks (presentation clock only; sim ticks stay fixed),
+    combat-aware framing and off-axis lock-on angle.
+TESTED: 46/46 core, 42/42 flow (7 new presentation checks), zero errors, no leaks over restarts.
+NOT VERIFIED: how it looks and performs on a real GPU / Chromebook.
+
+v4 — SKINNED MODELS (presentation only; core untouched)
+- Five rigged GLBs embedded (base64) + GLTFLoader/SkeletonUtils r128. src/models.js retargets: each GLB bone copies the pose-rig joint rotation x a T-pose->arms-down rest correction; spine/neck/clavicle/feet blend between joints.
+- Blade = GLB blade node, re-aimed to the old wrist convention so every pose and trail lines up. Capes/scarf tails stay on the existing cloth sim.
+- Effects: hit/break/deathblow flash, block/deflect tint, perilous eye glow (enemies), King Phase II cracks fade in + pulse, crimson edge glow.
+- Tune: "Skinned models (0 = block rig)", "Hit flash". Block rig remains as automatic fallback if a model fails to load.
+- Textures decode via <img> (patched loader) for file:// reliability.
+- Tests: core 46/46, flow/input 42/42, smoke clean, models 27/27; real headless Chrome (SwiftShader) loads 5/5 models from file:// with no page errors.
+
+v5 — ANIMATION DEPTH, PLAYER KIT, KING PHASE II IDENTITY
+Core (deterministic, tested):
+- Light chain is 4 hits (4th = spinning finisher, wide arc, big knockback). Light…Heavy = rising finisher. Heavy within 0.6 s of a deflect = riposte. Light out of a dodge = dash cut; while sprinting = running thrust; in the air = plunge (once per jump).
+- King Phase II: Crimson Arc travelling wave (deflect / dodge through / jump; deflecting it hurts his posture), blocks of his blade chip health (18% of damage), new wave strings.
+- Enemy attackStart events flag the last swing of a string.
+Presentation:
+- 14 new attack families + reaction, execution, victim and awakening poses; stance-relative families per character (stance x style x light/heavy/perilous follow-through = 252 families).
+- Distinct combat stances (duelist fencer, warden low and wide, brother low crouch, king regal, king II predatory "crimson stance").
+- Living stance: posture strain, low health and AI tempo mode reshape the idle.
+- Every directly driven state blends in from the previous pose; chained swings blend longer; swing-to-swing variation.
+- Hit escalation (alternating flinches, stumble at 3+ hits / heavy).
+- Per-enemy deathblows (heart pierce, crown splitter, turning cut, kick-thrust, Kingsfall) and per-enemy victim reactions and death falls.
+- King awakening sequence (kneel, rise, blade drag, roar) + crimson aura.
+- Readability: white glint before delayed strikes (feints never glint), low drum on the last swing of a string, eye flash when an enemy branches, chain pips on HUD, finisher FX.
+Tests: core 61/61, flow/input 42/42, smoke clean, models 27/27, v5 11/11; real headless Chrome renders all of it with no page errors.
+
+v6 — see the CHANGELOG comment at the top of the HTML. Tests: core 72/72, flow/input 42/42, smoke clean, models 27/27, v5 11/11, v6 29/29.
+
+V7 VISUAL OVERHAUL (Oct 21 2026) — presentation only, core.js md5 unchanged
+[x] ACES tone mapping + sRGB, single combined post pass (half-res bloom Med/High, vignette, grain, moonlit grade, punch/flash), rim light, env-map steel/puddles
+[x] Ruined castle courtyard: walls/breaches, gate + portcullis, stairs/terrace, banners, dead trees, sky dome + 3 ridges, normal-mapped stone, moss, puddles, GPU ash, fog; Phase II blood moon
+[x] Capes/sash (verlet), new boss silhouettes, white-hot edge on perfect deflect
+[x] Streak sparks, posture-break flash, deathblow slow-mo cinematic, ink/blood toggle (default ink)
+[x] New title, boss name cards, posture bar polish, SVG danger rune, localStorage veynhold_v7 (migrates v6)
+TESTED: core 72/72, input/flow 42/42, v6 checks 29/29 on final build; SwiftShader screenshots High.
+NOT VERIFIED: real Chromebook FPS; Low/Medium frame cost not measured.
+
+V8 ANIMATION + CINEMATICS PASS (Oct 22 2026) — presentation only, core.js md5 unchanged (74a5299e9a45d86aaddc90e2f1831821)
+[x] Quaternius CC0 sword clips (swA/B/C/AB/OH/Dash) on attacks, re-timed so each clip's strike frame lands on the core strike tick
+    at every tempo / jitter / held windup (0.00 ms worst over 3042 variants); perilous / special moves stay procedural for clear tells.
+[x] Clip locomotion blend (idle/walk/jog/run, backpedal, strafes) with foot-speed time warp; blend weights always sum to 1; foot slide <= v7.
+[x] Boss intros (~3.3 s, letterbox, skippable by any input, the skipping key still reaches the game; sim held at tick 0), restart skips them,
+    none in practice; setting "Boss intros" persists. Final-deathblow finisher camera (King has his own), victory title cards, red death fade.
+[x] Lock-on camera orbits wider off the duel line up close; big swings pull the camera out and widen the lens.
+[x] Music intensity layers (war drums + tremolo pad) over the drone bed. Foot contact shadows. Torch embers (GPU). Wrap / subsurface
+    lighting on skin + cloth (Med/High). Wet-floor roughness + floor reflection (Med/High). Per-phase LUT grade (Med/High). High only:
+    depth fog, moon god rays, cinematic DOF, torch heat shimmer.
+[x] Save key veynhold_v8 (migrates v7, falls back to v6; old key left in place). Credit "Animations by Quaternius (CC0)" in How to fight.
+[x] Fix: Game.frame clamps a backwards clock step to dt 0. It used to pass a negative dt to the sim and camera springs, which stalled the sim
+    for that many seconds and left the camera stuck. Found through the lock-on camera check (the camera code and the threshold were both
+    correct; the fps-trace section before it runs its own clock, so the next frame arrived ~21.7 s "in the past"). New v8 check guards it.
+[x] Fix: stepping down from Medium/High to Low (pause menu or the adaptive step-down) left the env reflection on the floor material.
+    That was the whole Low regression vs v7 in headless SwiftShader (floor draw ~82 ms vs ~53 ms GPU time). Low now clears it.
+TESTED (final build): core ct 72/72, input/flow 42/42 errors none, smoke clean, models 27/27, v5 11/11, v6 29/29, v8 40/40.
+PERF (headless SwiftShader, 1280x720, NOT a Chromebook; ms per frame, mean of runs / median p50): Low v7 125.6/116.6 vs v8 122.2/116.6
+    (4 runs each, within noise); Medium v7 397.9/350 vs v8 498.7/450 (4 vs 3 runs); High v7 592.5/533.3 vs v8 756.2/666.6 (3 runs each).
+NOT VERIFIED: real Chromebook frame rate; why Medium/High cost ~25-28% more than v7 (v8 features by design, not attributed one by one);
+    feel of the clip timing by a human player; audio mix of the music layers.

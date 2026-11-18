@@ -1,0 +1,132 @@
+{
+ "results": [
+  {
+   "name": "1 dash: 3-4 m, motion 0.28-0.35 s, camera-relative direction / backstep",
+   "status": "PASS",
+   "notes": [
+    "W+C (forward): 3.30 m, motion 0.317 s, state 0.367 s, dir err 0.000, i-frames 0.033-0.250, cam accel max 93.10",
+    "C alone (backstep): 3.30 m, motion 0.317 s, state 0.367 s, dir err 0.000, i-frames 0.033-0.250, cam accel max 121.77",
+    "D+C, camera yaw 0.7 (camera-relative right): 3.30 m, motion 0.317 s, state 0.367 s, dir err 0.000, i-frames 0.033-0.250, cam accel max 102.19"
+   ]
+  },
+  {
+   "name": "2 C is buffered (mid-dash, cooldown, attack startup) and the dash cancels into an attack",
+   "status": "PASS",
+   "notes": [
+    "second C at +0.100 s -> 2 dashes",
+    "second C at +0.433 s -> 2 dashes",
+    "C 0.1 s into a light attack -> dash at +0.350 s",
+    "J during the dash -> attack (dash cut) at +0.267 s"
+   ]
+  },
+  {
+   "name": "3 dash into walls: the player never ends a step inside a collider",
+   "status": "PASS",
+   "notes": [
+    "yard north wall, head-on: moved 2.01 m, deepest overlap -0.000 m, camera clearance min 5.61",
+    "yard north wall, 45 deg (slide): moved 5.61 m, deepest overlap -0.000 m, camera clearance min 4.70",
+    "yard south-west corner: moved 2.88 m, deepest overlap -0.000 m, camera clearance min 3.50",
+    "gaol cell bars: moved 1.38 m, deepest overlap 0.000 m, camera clearance min 0.76",
+    "gaol corridor A west wall: moved 1.76 m, deepest overlap -0.000 m, camera clearance min 0.81",
+    "ossuary passage wall: moved 1.01 m, deepest overlap -0.000 m, camera clearance min 0.63"
+   ]
+  },
+  {
+   "name": "4 camera never inside a collider on scripted walks (gaol corridor, ossuary)",
+   "status": "PASS",
+   "notes": [
+    "gaol corridor A -> cells passage: 630 frames, waypoints 4/4, camera clearance min 1.10 m, frames inside 0, arm pops >0.6 m 0",
+    "gaol corridor A, swaying view: 270 frames, waypoints 2/2, camera clearance min 1.69 m, frames inside 0, arm pops >0.6 m 0",
+    "ossuary entry passage: 150 frames, waypoints 2/2, camera clearance min 0.61 m, frames inside 0, arm pops >0.6 m 0",
+    "ossuary hall: 210 frames, waypoints 2/2, camera clearance min 1.07 m, frames inside 0, arm pops >0.6 m 0"
+   ]
+  },
+  {
+   "name": "5 lock-on keeps the target on screen",
+   "status": "PASS",
+   "notes": [
+    "strafe + dash around (wall and doorway at your back): 200 locked frames, target |ndc| max x 0.13 y 0.21, off-screen frames 0, yaw rate max 3.26 rad/s",
+    "close in along the corridor with W + dash: 80 locked frames, target |ndc| max x 0.02 y 0.08, off-screen frames 0, yaw rate max 4.31 rad/s"
+   ]
+  },
+  {
+   "name": "6 no page errors",
+   "status": "PASS",
+   "notes": []
+  }
+ ],
+ "metrics": {
+  "dash W+C (forward)": {
+   "dist": "3.30",
+   "motion_s": "0.317",
+   "state_s": "0.367",
+   "dirErr": "0.000",
+   "iframes": "0.033-0.250",
+   "camAccMax": "93.10",
+   "camLagMax": "1.56"
+  },
+  "dash C alone (backstep)": {
+   "dist": "3.30",
+   "motion_s": "0.317",
+   "state_s": "0.367",
+   "dirErr": "0.000",
+   "iframes": "0.033-0.250",
+   "camAccMax": "121.77",
+   "camLagMax": "1.49"
+  },
+  "dash D+C, camera yaw 0.7 (camera-relative right)": {
+   "dist": "3.30",
+   "motion_s": "0.317",
+   "state_s": "0.367",
+   "dirErr": "0.000",
+   "iframes": "0.033-0.250",
+   "camAccMax": "102.19",
+   "camLagMax": "1.56"
+  },
+  "second C at +0.100": 2,
+  "second C at +0.433": 2,
+  "C in attack startup": "0.350",
+  "walk gaol corridor A -> cells passage": {
+   "frames": 630,
+   "minClear": "1.10",
+   "framesInside": 0,
+   "bigPops": 0,
+   "minArm": "-0.03"
+  },
+  "walk gaol corridor A, swaying view": {
+   "frames": 270,
+   "minClear": "1.69",
+   "framesInside": 0,
+   "bigPops": 0,
+   "minArm": "-0.03"
+  },
+  "walk ossuary entry passage": {
+   "frames": 150,
+   "minClear": "0.61",
+   "framesInside": 0,
+   "bigPops": 0,
+   "minArm": "4.70"
+  },
+  "walk ossuary hall": {
+   "frames": 210,
+   "minClear": "1.07",
+   "framesInside": 0,
+   "bigPops": 0,
+   "minArm": "2.80"
+  },
+  "lock strafe + dash around (wall and doorway at your back)": {
+   "frames": 200,
+   "ndcMaxX": "0.13",
+   "ndcMaxY": "0.21",
+   "offscreen": 0,
+   "yawRateMax": "3.26"
+  },
+  "lock close in along the corridor with W + dash": {
+   "frames": 80,
+   "ndcMaxX": "0.02",
+   "ndcMaxY": "0.08",
+   "offscreen": 0,
+   "yawRateMax": "4.31"
+  }
+ }
+}

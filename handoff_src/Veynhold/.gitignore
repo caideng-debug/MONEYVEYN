@@ -1,0 +1,8 @@
+.tools/
+.test/node_modules/
+dist/
+shots/
+assets_incoming/
+.backup_pre_repair/
+models/Veynhold_Characters.zip
+__pycache__/

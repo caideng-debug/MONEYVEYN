@@ -1,0 +1,5152 @@
+{
+ "props": [
+  {
+   "t": "cart",
+   "x": 5,
+   "z": -73.5,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 1.2,
+   "bb": [
+    3.67,
+    -75.29,
+    6.33,
+    -70.16
+   ],
+   "cols": 4,
+   "n": 4,
+   "flag": []
+  },
+  {
+   "t": "graves",
+   "x": -6,
+   "z": -75,
+   "g": 0,
+   "contact": -0.19,
+   "sink": 0.19,
+   "straddle": 0,
+   "top": 1.19,
+   "bb": [
+    -6.45,
+    -76.7,
+    -2.35,
+    -73.14
+   ],
+   "cols": 6,
+   "n": 18,
+   "flag": []
+  },
+  {
+   "t": "shovel",
+   "x": -6.2,
+   "z": -68.3,
+   "g": 0,
+   "contact": -0.06,
+   "sink": 0.06,
+   "straddle": 0,
+   "top": 1.43,
+   "bb": [
+    -6.52,
+    -68.33,
+    -6,
+    -68.27
+   ],
+   "cols": 0,
+   "n": 2,
+   "flag": []
+  },
+  {
+   "t": "notice",
+   "x": -3.3,
+   "z": -63.5,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 1.5,
+   "bb": [
+    -3.57,
+    -63.59,
+    -2.98,
+    -63.3
+   ],
+   "cols": 1,
+   "n": 3,
+   "flag": []
+  },
+  {
+   "t": "lamp",
+   "x": -7.6,
+   "z": -66.5,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 1.54,
+   "bb": [
+    -10.6,
+    -69.5,
+    -4.6,
+    -63.5
+   ],
+   "cols": 0,
+   "n": 4,
+   "flag": []
+  },
+  {
+   "t": "deadtree",
+   "x": 7.5,
+   "z": -64,
+   "g": 0,
+   "contact": -0.24,
+   "sink": 0.24,
+   "straddle": 0,
+   "top": 5.63,
+   "bb": [
+    6.44,
+    -64.76,
+    7.79,
+    -63.7
+   ],
+   "cols": 1,
+   "n": 121,
+   "flag": []
+  },
+  {
+   "t": "dress:pit",
+   "x": 0,
+   "z": -70,
+   "g": 0,
+   "contact": -0.06,
+   "sink": 0.06,
+   "straddle": 0,
+   "top": 1.26,
+   "bb": [
+    -7.83,
+    -77.22,
+    7.19,
+    -62.7
+   ],
+   "cols": 0,
+   "n": 2,
+   "flag": []
+  },
+  {
+   "t": "gallows",
+   "x": 0,
+   "z": -36,
+   "g": 1.6,
+   "contact": -1.6,
+   "sink": 1.6,
+   "straddle": 1.6,
+   "top": 5.2,
+   "bb": [
+    -6.15,
+    -38.65,
+    6.15,
+    -33.35
+   ],
+   "cols": 3,
+   "n": 28,
+   "flag": [
+    "STRADDLES elevation 1.6"
+   ]
+  },
+  {
+   "t": "dress:gallows",
+   "x": 0,
+   "z": -36,
+   "g": 1.6,
+   "contact": -0.4,
+   "sink": 0.4,
+   "straddle": 1.6,
+   "top": 5.52,
+   "bb": [
+    -4.82,
+    -42.26,
+    5.8,
+    -34.04
+   ],
+   "cols": 1,
+   "n": 3,
+   "flag": [
+    "STRADDLES elevation 1.6"
+   ]
+  },
+  {
+   "t": "stand",
+   "x": 14,
+   "z": -20.5,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 6.79,
+   "bb": [
+    9,
+    -23,
+    19,
+    -18
+   ],
+   "cols": 4,
+   "n": 6,
+   "flag": []
+  },
+  {
+   "t": "block_small",
+   "x": -10,
+   "z": -46,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 0.7,
+   "bb": [
+    -10.52,
+    -46.55,
+    -9.48,
+    -45.45
+   ],
+   "cols": 1,
+   "n": 1,
+   "flag": []
+  },
+  {
+   "t": "crates",
+   "x": -18,
+   "z": -50,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 1.07,
+   "bb": [
+    -18.6,
+    -50.5,
+    -16.23,
+    -48.26
+   ],
+   "cols": 4,
+   "n": 4,
+   "flag": []
+  },
+  {
+   "t": "crates",
+   "x": 18,
+   "z": -45,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 1,
+   "bb": [
+    17.49,
+    -45.61,
+    19.71,
+    -43.35
+   ],
+   "cols": 3,
+   "n": 3,
+   "flag": []
+  },
+  {
+   "t": "torch",
+   "x": -20.6,
+   "z": -44,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 2.79,
+   "bb": [
+    -23.6,
+    -47,
+    -17.6,
+    -41
+   ],
+   "cols": 1,
+   "n": 4,
+   "flag": []
+  },
+  {
+   "t": "torch",
+   "x": 20.6,
+   "z": -44,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 2.79,
+   "bb": [
+    17.6,
+    -47,
+    23.6,
+    -41
+   ],
+   "cols": 1,
+   "n": 4,
+   "flag": []
+  },
+  {
+   "t": "torch",
+   "x": -20.6,
+   "z": -24,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 2.79,
+   "bb": [
+    -23.6,
+    -27,
+    -17.6,
+    -21
+   ],
+   "cols": 1,
+   "n": 4,
+   "flag": []
+  },
+  {
+   "t": "torch",
+   "x": 20.6,
+   "z": -20,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 2.79,
+   "bb": [
+    17.6,
+    -23,
+    23.6,
+    -17
+   ],
+   "cols": 1,
+   "n": 4,
+   "flag": []
+  },
+  {
+   "t": "torch",
+   "x": -3.8,
+   "z": -17.2,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 2.79,
+   "bb": [
+    -6.8,
+    -20.2,
+    -0.8,
+    -14.2
+   ],
+   "cols": 1,
+   "n": 4,
+   "flag": []
+  },
+  {
+   "t": "torch",
+   "x": 3.8,
+   "z": -17.2,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 2.79,
+   "bb": [
+    0.8,
+    -20.2,
+    6.8,
+    -14.2
+   ],
+   "cols": 1,
+   "n": 4,
+   "flag": []
+  },
+  {
+   "t": "banner",
+   "x": -10,
+   "z": -16.6,
+   "g": 0,
+   "contact": 2.4,
+   "sink": -2.4,
+   "straddle": 0,
+   "top": 6.4,
+   "bb": [
+    -10.7,
+    -16.6,
+    -9.3,
+    -16.6
+   ],
+   "cols": 0,
+   "n": 1,
+   "flag": [
+    "FLOAT 2.4"
+   ]
+  },
+  {
+   "t": "banner",
+   "x": 10,
+   "z": -16.6,
+   "g": 0,
+   "contact": 2.4,
+   "sink": -2.4,
+   "straddle": 0,
+   "top": 6.4,
+   "bb": [
+    9.3,
+    -16.6,
+    10.7,
+    -16.6
+   ],
+   "cols": 0,
+   "n": 1,
+   "flag": [
+    "FLOAT 2.4"
+   ]
+  },
+  {
+   "t": "rubble",
+   "x": 23,
+   "z": -28,
+   "g": 0,
+   "contact": -0.41,
+   "sink": 0.41,
+   "straddle": 0,
+   "top": 0.71,
+   "bb": [
+    21.44,
+    -30.06,
+    24.41,
+    -25.69
+   ],
+   "cols": 0,
+   "n": 10,
+   "flag": []
+  },
+  {
+   "t": "tower",
+   "x": -24,
+   "z": -56,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 13.8,
+   "bb": [
+    -25.8,
+    -57.85,
+    -22.2,
+    -54.15
+   ],
+   "cols": 1,
+   "n": 6,
+   "flag": []
+  },
+  {
+   "t": "tower",
+   "x": 24,
+   "z": -56,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 12.8,
+   "bb": [
+    22.2,
+    -57.85,
+    25.8,
+    -54.15
+   ],
+   "cols": 1,
+   "n": 6,
+   "flag": []
+  },
+  {
+   "t": "tower",
+   "x": -24,
+   "z": -14,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 14.8,
+   "bb": [
+    -25.8,
+    -15.85,
+    -22.2,
+    -12.15
+   ],
+   "cols": 1,
+   "n": 6,
+   "flag": []
+  },
+  {
+   "t": "tower",
+   "x": 24,
+   "z": -14,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 12.8,
+   "bb": [
+    22.2,
+    -15.85,
+    25.8,
+    -12.15
+   ],
+   "cols": 1,
+   "n": 6,
+   "flag": []
+  },
+  {
+   "t": "torch",
+   "x": -30,
+   "z": -31.6,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 2.79,
+   "bb": [
+    -33,
+    -34.6,
+    -27,
+    -28.6
+   ],
+   "cols": 1,
+   "n": 4,
+   "flag": []
+  },
+  {
+   "t": "torch",
+   "x": -46.5,
+   "z": -36.4,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 2.79,
+   "bb": [
+    -49.5,
+    -39.4,
+    -43.5,
+    -33.4
+   ],
+   "cols": 1,
+   "n": 4,
+   "flag": []
+  },
+  {
+   "t": "torch",
+   "x": -50.6,
+   "z": -20,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 2.79,
+   "bb": [
+    -53.6,
+    -23,
+    -47.6,
+    -17
+   ],
+   "cols": 1,
+   "n": 4,
+   "flag": []
+  },
+  {
+   "t": "torch",
+   "x": -43,
+   "z": -21.6,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 2.79,
+   "bb": [
+    -46,
+    -24.6,
+    -40,
+    -18.6
+   ],
+   "cols": 1,
+   "n": 4,
+   "flag": []
+  },
+  {
+   "t": "desk",
+   "x": -46,
+   "z": -24,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 0.92,
+   "bb": [
+    -46.8,
+    -24.4,
+    -45.2,
+    -23.6
+   ],
+   "cols": 1,
+   "n": 2,
+   "flag": []
+  },
+  {
+   "t": "brazier",
+   "x": -40.8,
+   "z": -23.4,
+   "g": 0,
+   "contact": -0.05,
+   "sink": 0.05,
+   "straddle": 0,
+   "top": 1.68,
+   "bb": [
+    -43.8,
+    -26.4,
+    -37.8,
+    -20.4
+   ],
+   "cols": 1,
+   "n": 11,
+   "flag": []
+  },
+  {
+   "t": "rack",
+   "x": -39,
+   "z": -29,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 1.7,
+   "bb": [
+    -40.11,
+    -29.15,
+    -37.89,
+    -28.85
+   ],
+   "cols": 1,
+   "n": 9,
+   "flag": []
+  },
+  {
+   "t": "tower",
+   "x": -53,
+   "z": -40,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 16.8,
+   "bb": [
+    -54.8,
+    -41.85,
+    -51.2,
+    -38.15
+   ],
+   "cols": 1,
+   "n": 6,
+   "flag": []
+  },
+  {
+   "t": "tent",
+   "x": -42,
+   "z": 6,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 3.6,
+   "bb": [
+    -44.14,
+    3.38,
+    -39.86,
+    8.62
+   ],
+   "cols": 1,
+   "n": 2,
+   "flag": []
+  },
+  {
+   "t": "tent",
+   "x": -42,
+   "z": 18,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 3.6,
+   "bb": [
+    -44.62,
+    15.86,
+    -39.38,
+    20.14
+   ],
+   "cols": 1,
+   "n": 2,
+   "flag": []
+  },
+  {
+   "t": "tent",
+   "x": -28,
+   "z": 22,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 3.6,
+   "bb": [
+    -30.46,
+    19.68,
+    -25.54,
+    24.32
+   ],
+   "cols": 1,
+   "n": 2,
+   "flag": []
+  },
+  {
+   "t": "tent",
+   "x": -18,
+   "z": 6,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 3.6,
+   "bb": [
+    -20.12,
+    3.24,
+    -15.88,
+    8.76
+   ],
+   "cols": 1,
+   "n": 2,
+   "flag": []
+  },
+  {
+   "t": "tent",
+   "x": 14,
+   "z": 24,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 3.6,
+   "bb": [
+    11.79,
+    21.45,
+    16.21,
+    26.55
+   ],
+   "cols": 1,
+   "n": 2,
+   "flag": []
+  },
+  {
+   "t": "desk",
+   "x": -24,
+   "z": 1.2,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 0.92,
+   "bb": [
+    -24.8,
+    0.8,
+    -23.2,
+    1.6
+   ],
+   "cols": 1,
+   "n": 2,
+   "flag": []
+  },
+  {
+   "t": "brazier",
+   "x": -30,
+   "z": 10,
+   "g": 0,
+   "contact": -0.05,
+   "sink": 0.05,
+   "straddle": 0,
+   "top": 1.68,
+   "bb": [
+    -33,
+    7,
+    -27,
+    13
+   ],
+   "cols": 1,
+   "n": 11,
+   "flag": []
+  },
+  {
+   "t": "brazier",
+   "x": -6,
+   "z": 8,
+   "g": 0,
+   "contact": -0.05,
+   "sink": 0.05,
+   "straddle": 0,
+   "top": 1.68,
+   "bb": [
+    -9,
+    5,
+    -3,
+    11
+   ],
+   "cols": 1,
+   "n": 11,
+   "flag": []
+  },
+  {
+   "t": "brazier",
+   "x": 22,
+   "z": 10,
+   "g": 0,
+   "contact": -0.05,
+   "sink": 0.05,
+   "straddle": 0,
+   "top": 1.68,
+   "bb": [
+    19,
+    7,
+    25,
+    13
+   ],
+   "cols": 1,
+   "n": 11,
+   "flag": []
+  },
+  {
+   "t": "brazier",
+   "x": -12,
+   "z": 26,
+   "g": 0,
+   "contact": -0.05,
+   "sink": 0.05,
+   "straddle": 0,
+   "top": 1.68,
+   "bb": [
+    -15,
+    23,
+    -9,
+    29
+   ],
+   "cols": 1,
+   "n": 11,
+   "flag": []
+  },
+  {
+   "t": "brazier",
+   "x": 12,
+   "z": 26,
+   "g": 0,
+   "contact": -0.05,
+   "sink": 0.05,
+   "straddle": 0,
+   "top": 1.68,
+   "bb": [
+    9,
+    23,
+    15,
+    29
+   ],
+   "cols": 1,
+   "n": 11,
+   "flag": []
+  },
+  {
+   "t": "dummy",
+   "x": -2,
+   "z": -4,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 2.27,
+   "bb": [
+    -2.6,
+    -4.25,
+    -1.4,
+    -3.72
+   ],
+   "cols": 1,
+   "n": 4,
+   "flag": []
+  },
+  {
+   "t": "dummy",
+   "x": 2,
+   "z": -6,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 2.27,
+   "bb": [
+    1.4,
+    -6.25,
+    2.6,
+    -5.72
+   ],
+   "cols": 1,
+   "n": 4,
+   "flag": []
+  },
+  {
+   "t": "rack",
+   "x": 6,
+   "z": -6,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 1.7,
+   "bb": [
+    4.89,
+    -6.15,
+    7.11,
+    -5.85
+   ],
+   "cols": 1,
+   "n": 9,
+   "flag": []
+  },
+  {
+   "t": "cage",
+   "x": 26,
+   "z": 22,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 6.05,
+   "bb": [
+    -0.4,
+    -1.31,
+    26.79,
+    23.75
+   ],
+   "cols": 1,
+   "n": 15,
+   "flag": []
+  },
+  {
+   "t": "wagon",
+   "x": 42,
+   "z": 20,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 1.65,
+   "bb": [
+    40.3,
+    19.1,
+    43.7,
+    20.9
+   ],
+   "cols": 4,
+   "n": 6,
+   "flag": []
+  },
+  {
+   "t": "wagon",
+   "x": 38,
+   "z": 25,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 1.65,
+   "bb": [
+    37.1,
+    23.3,
+    38.9,
+    26.7
+   ],
+   "cols": 4,
+   "n": 6,
+   "flag": []
+  },
+  {
+   "t": "crates",
+   "x": 44,
+   "z": 28,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 0.98,
+   "bb": [
+    43.47,
+    27.39,
+    45.62,
+    29.65
+   ],
+   "cols": 3,
+   "n": 3,
+   "flag": []
+  },
+  {
+   "t": "crates",
+   "x": -54,
+   "z": 26,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 1.09,
+   "bb": [
+    -54.75,
+    25.37,
+    -52.19,
+    28.85
+   ],
+   "cols": 5,
+   "n": 5,
+   "flag": []
+  },
+  {
+   "t": "crates",
+   "x": 30,
+   "z": -8,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 1.02,
+   "bb": [
+    29.32,
+    -8.59,
+    31.64,
+    -6.36
+   ],
+   "cols": 4,
+   "n": 4,
+   "flag": []
+  },
+  {
+   "t": "barrels",
+   "x": -48,
+   "z": -8,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 1,
+   "bb": [
+    -48.41,
+    -8.41,
+    -45.79,
+    -6.69
+   ],
+   "cols": 5,
+   "n": 10,
+   "flag": []
+  },
+  {
+   "t": "barrels",
+   "x": 10,
+   "z": 28,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 1,
+   "bb": [
+    9.59,
+    27.59,
+    12.21,
+    28.41
+   ],
+   "cols": 3,
+   "n": 6,
+   "flag": []
+  },
+  {
+   "t": "gibbets",
+   "x": -54,
+   "z": 0,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 5,
+   "bb": [
+    -54.12,
+    -0.4,
+    -52,
+    0.4
+   ],
+   "cols": 1,
+   "n": 4,
+   "flag": []
+  },
+  {
+   "t": "gibbets",
+   "x": -54,
+   "z": 12,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 5,
+   "bb": [
+    -54.12,
+    11.6,
+    -52,
+    12.4
+   ],
+   "cols": 1,
+   "n": 4,
+   "flag": []
+  },
+  {
+   "t": "deadtree",
+   "x": 30,
+   "z": 0,
+   "g": 0,
+   "contact": -0.23,
+   "sink": 0.23,
+   "straddle": 0,
+   "top": 8.74,
+   "bb": [
+    26.14,
+    -1.5,
+    30.31,
+    3.52
+   ],
+   "cols": 1,
+   "n": 40,
+   "flag": []
+  },
+  {
+   "t": "deadtree",
+   "x": -50,
+   "z": 22,
+   "g": 0,
+   "contact": -0.26,
+   "sink": 0.26,
+   "straddle": 0,
+   "top": 6.99,
+   "bb": [
+    -51.08,
+    20.29,
+    -49.69,
+    22.32
+   ],
+   "cols": 1,
+   "n": 121,
+   "flag": []
+  },
+  {
+   "t": "leverhouse",
+   "x": 6,
+   "z": -9.6,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 3.4,
+   "bb": [
+    5.8,
+    -10.6,
+    8.6,
+    -8
+   ],
+   "cols": 4,
+   "n": 2,
+   "flag": []
+  },
+  {
+   "t": "banner",
+   "x": -8,
+   "z": 29.4,
+   "g": 0,
+   "contact": 2.4,
+   "sink": -2.4,
+   "straddle": 0,
+   "top": 6.4,
+   "bb": [
+    -8.7,
+    29.4,
+    -7.3,
+    29.4
+   ],
+   "cols": 0,
+   "n": 1,
+   "flag": [
+    "FLOAT 2.4"
+   ]
+  },
+  {
+   "t": "banner",
+   "x": 8,
+   "z": 29.4,
+   "g": 0,
+   "contact": 2.4,
+   "sink": -2.4,
+   "straddle": 0,
+   "top": 6.4,
+   "bb": [
+    7.3,
+    29.4,
+    8.7,
+    29.4
+   ],
+   "cols": 0,
+   "n": 1,
+   "flag": [
+    "FLOAT 2.4"
+   ]
+  },
+  {
+   "t": "tower",
+   "x": -6,
+   "z": 31,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 15.8,
+   "bb": [
+    -7.8,
+    29.15,
+    -4.2,
+    32.85
+   ],
+   "cols": 1,
+   "n": 6,
+   "flag": []
+  },
+  {
+   "t": "tower",
+   "x": 6,
+   "z": 31,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 15.8,
+   "bb": [
+    4.2,
+    29.15,
+    7.8,
+    32.85
+   ],
+   "cols": 1,
+   "n": 6,
+   "flag": []
+  },
+  {
+   "t": "bonepile",
+   "x": 52,
+   "z": -38,
+   "g": 0,
+   "contact": -0.02,
+   "sink": 0.02,
+   "straddle": 0,
+   "top": 0.76,
+   "bb": [
+    50.5,
+    -39.52,
+    53.5,
+    -36.55
+   ],
+   "cols": 1,
+   "n": 41,
+   "flag": []
+  },
+  {
+   "t": "bonepile",
+   "x": 37,
+   "z": -17,
+   "g": 0,
+   "contact": -0.02,
+   "sink": 0.02,
+   "straddle": 0,
+   "top": 0.76,
+   "bb": [
+    35.5,
+    -18.47,
+    38.6,
+    -15.57
+   ],
+   "cols": 1,
+   "n": 41,
+   "flag": []
+  },
+  {
+   "t": "bonepile",
+   "x": 54,
+   "z": -17,
+   "g": 0,
+   "contact": -0.02,
+   "sink": 0.02,
+   "straddle": 0,
+   "top": 0.76,
+   "bb": [
+    52.5,
+    -18.59,
+    55.5,
+    -15.57
+   ],
+   "cols": 1,
+   "n": 41,
+   "flag": []
+  },
+  {
+   "t": "candles",
+   "x": 51.4,
+   "z": -24.6,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 0.56,
+   "bb": [
+    48.4,
+    -27.6,
+    54.4,
+    -21.6
+   ],
+   "cols": 0,
+   "n": 20,
+   "flag": []
+  },
+  {
+   "t": "candles",
+   "x": 52.75,
+   "z": -28.7,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 0.55,
+   "bb": [
+    49.75,
+    -31.7,
+    55.75,
+    -25.7
+   ],
+   "cols": 0,
+   "n": 20,
+   "flag": []
+  },
+  {
+   "t": "altar",
+   "x": 54,
+   "z": -28,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 1.06,
+   "bb": [
+    53.2,
+    -29.2,
+    54.8,
+    -26.8
+   ],
+   "cols": 4,
+   "n": 2,
+   "flag": []
+  },
+  {
+   "t": "belltower",
+   "x": 52,
+   "z": -46,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 23,
+   "bb": [
+    49.74,
+    -49.1,
+    54.26,
+    -43.74
+   ],
+   "cols": 0,
+   "n": 3,
+   "flag": []
+  },
+  {
+   "t": "torch",
+   "x": 34.8,
+   "z": -31.1,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 2.79,
+   "bb": [
+    31.8,
+    -34.1,
+    37.8,
+    -28.1
+   ],
+   "cols": 1,
+   "n": 4,
+   "flag": []
+  },
+  {
+   "t": "skullwall",
+   "x": 45,
+   "z": -41.5,
+   "g": 0,
+   "contact": -0.01,
+   "sink": 0.01,
+   "straddle": 0,
+   "top": 1.18,
+   "bb": [
+    42.04,
+    -41.54,
+    48.16,
+    -41.26
+   ],
+   "cols": 0,
+   "n": 60,
+   "flag": []
+  },
+  {
+   "t": "greatblock",
+   "x": 0,
+   "z": 50,
+   "g": 1.8,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 0.9,
+   "bb": [
+    -1.66,
+    48.3,
+    1.66,
+    51.7
+   ],
+   "cols": 1,
+   "n": 2,
+   "flag": []
+  },
+  {
+   "t": "wallbanners",
+   "x": 0,
+   "z": 50,
+   "g": 1.8,
+   "contact": 2,
+   "sink": -2,
+   "straddle": 1.8,
+   "top": 4.6,
+   "bb": [
+    -13.88,
+    38.78,
+    13.88,
+    54.97
+   ],
+   "cols": 0,
+   "n": 1,
+   "flag": [
+    "FLOAT 2",
+    "STRADDLES elevation 1.8"
+   ]
+  },
+  {
+   "t": "statue",
+   "x": -9,
+   "z": 59,
+   "g": 1.8,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 5.05,
+   "bb": [
+    -9.8,
+    58.2,
+    -8.2,
+    59.8
+   ],
+   "cols": 1,
+   "n": 3,
+   "flag": []
+  },
+  {
+   "t": "statue",
+   "x": 9,
+   "z": 59,
+   "g": 1.8,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 5.05,
+   "bb": [
+    8.2,
+    58.2,
+    9.8,
+    59.8
+   ],
+   "cols": 1,
+   "n": 3,
+   "flag": []
+  },
+  {
+   "t": "torch",
+   "x": -11,
+   "z": 41,
+   "g": 1.8,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 1.8,
+   "top": 2.79,
+   "bb": [
+    -14,
+    38,
+    -8,
+    44
+   ],
+   "cols": 1,
+   "n": 4,
+   "flag": [
+    "STRADDLES elevation 1.8"
+   ]
+  },
+  {
+   "t": "torch",
+   "x": 11,
+   "z": 41,
+   "g": 1.8,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 1.8,
+   "top": 2.79,
+   "bb": [
+    8,
+    38,
+    14,
+    44
+   ],
+   "cols": 1,
+   "n": 4,
+   "flag": [
+    "STRADDLES elevation 1.8"
+   ]
+  },
+  {
+   "t": "torch",
+   "x": -3.6,
+   "z": 63,
+   "g": 1.8,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 1.8,
+   "top": 2.79,
+   "bb": [
+    -6.6,
+    60,
+    -0.6,
+    66
+   ],
+   "cols": 1,
+   "n": 4,
+   "flag": [
+    "STRADDLES elevation 1.8"
+   ]
+  },
+  {
+   "t": "torch",
+   "x": 3.6,
+   "z": 63,
+   "g": 1.8,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 1.8,
+   "top": 2.79,
+   "bb": [
+    0.6,
+    60,
+    6.6,
+    66
+   ],
+   "cols": 1,
+   "n": 4,
+   "flag": [
+    "STRADDLES elevation 1.8"
+   ]
+  },
+  {
+   "t": "papers",
+   "x": 0,
+   "z": 59.5,
+   "g": 1.8,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 0.8,
+   "bb": [
+    -0.45,
+    59.6,
+    0.45,
+    60.2
+   ],
+   "cols": 1,
+   "n": 1,
+   "flag": []
+  },
+  {
+   "t": "carving",
+   "x": 34.52,
+   "z": -40.5,
+   "g": 0,
+   "contact": 0.65,
+   "sink": -0.65,
+   "straddle": 0,
+   "top": 1.85,
+   "bb": [
+    34.47,
+    -41.25,
+    34.58,
+    -39.75
+   ],
+   "cols": 0,
+   "n": 6,
+   "flag": [
+    "FLOAT 0.65"
+   ]
+  },
+  {
+   "t": "greatgate",
+   "x": 0,
+   "z": 70,
+   "g": 1.8,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 1.8,
+   "top": 11.5,
+   "bb": [
+    -6.1,
+    68.8,
+    6.1,
+    71.2
+   ],
+   "cols": 0,
+   "n": 3,
+   "flag": [
+    "STRADDLES elevation 1.8"
+   ]
+  },
+  {
+   "t": "pines",
+   "x": 0,
+   "z": 82,
+   "g": 0,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 1.8,
+   "top": 17.23,
+   "bb": [
+    -24.59,
+    68.85,
+    25.95,
+    93.8
+   ],
+   "cols": 0,
+   "n": 96,
+   "flag": [
+    "STRADDLES elevation 1.8"
+   ]
+  },
+  {
+   "t": "torch",
+   "x": -4.9,
+   "z": 28.2,
+   "g": 0,
+   "contact": -0.72,
+   "sink": 0.72,
+   "straddle": 0.75,
+   "top": 2.79,
+   "bb": [
+    -7.9,
+    25.2,
+    -1.9,
+    31.2
+   ],
+   "cols": 1,
+   "n": 4,
+   "flag": [
+    "STRADDLES elevation 0.75"
+   ]
+  },
+  {
+   "t": "torch",
+   "x": 4.9,
+   "z": 27.4,
+   "g": 0,
+   "contact": -0.22,
+   "sink": 0.22,
+   "straddle": 0.25,
+   "top": 2.79,
+   "bb": [
+    1.9,
+    24.4,
+    7.9,
+    30.4
+   ],
+   "cols": 1,
+   "n": 4,
+   "flag": []
+  },
+  {
+   "t": "torch",
+   "x": -3.4,
+   "z": 31.9,
+   "g": 1,
+   "contact": -0.71,
+   "sink": 0.71,
+   "straddle": 1.74,
+   "top": 2.79,
+   "bb": [
+    -6.4,
+    28.9,
+    -0.4,
+    34.9
+   ],
+   "cols": 1,
+   "n": 4,
+   "flag": [
+    "STRADDLES elevation 1.74"
+   ]
+  },
+  {
+   "t": "deadtorch",
+   "x": 3.45,
+   "z": 31.85,
+   "g": 1,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 2.53,
+   "bb": [
+    3.25,
+    31.65,
+    3.65,
+    32.05
+   ],
+   "cols": 1,
+   "n": 3,
+   "flag": []
+  },
+  {
+   "t": "deadtorch",
+   "x": -3.45,
+   "z": 35.5,
+   "g": 1.8,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 2.53,
+   "bb": [
+    -3.65,
+    35.3,
+    -3.25,
+    35.7
+   ],
+   "cols": 1,
+   "n": 3,
+   "flag": []
+  },
+  {
+   "t": "deadtorch",
+   "x": 3.45,
+   "z": 35.5,
+   "g": 1.8,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 2.53,
+   "bb": [
+    3.25,
+    35.3,
+    3.65,
+    35.7
+   ],
+   "cols": 1,
+   "n": 3,
+   "flag": []
+  },
+  {
+   "t": "wallnotice",
+   "x": 5.6,
+   "z": 29.15,
+   "g": 0,
+   "contact": 1.2,
+   "sink": -1.2,
+   "straddle": 0,
+   "top": 2.3,
+   "bb": [
+    5.15,
+    29.12,
+    6.05,
+    29.18
+   ],
+   "cols": 0,
+   "n": 3,
+   "flag": [
+    "FLOAT 1.2"
+   ]
+  },
+  {
+   "t": "carving",
+   "x": -3.5,
+   "z": 32.7,
+   "g": 1,
+   "contact": 0.65,
+   "sink": -0.65,
+   "straddle": 0,
+   "top": 1.85,
+   "bb": [
+    -3.55,
+    31.95,
+    -3.44,
+    33.45
+   ],
+   "cols": 0,
+   "n": 6,
+   "flag": [
+    "FLOAT 0.65"
+   ]
+  },
+  {
+   "t": "chainposts",
+   "x": 0,
+   "z": 36.4,
+   "g": 1.8,
+   "contact": 0,
+   "sink": 0,
+   "straddle": 0,
+   "top": 2.81,
+   "bb": [
+    -3.71,
+    36.26,
+    3.71,
+    36.54
+   ],
+   "cols": 0,
+   "n": 18,
+   "flag": []
+  }
+ ],
+ "floatParts": [
+  {
+   "t": "cart",
+   "x": 5,
+   "z": -73.5,
+   "part": 0,
+   "mat": "MeshStandardMaterial",
+   "gap": 0.5,
+   "at": [
+    5,
+    -73.5
+   ],
+   "size": [
+    2.67,
+    0.7,
+    3.59
+   ]
+  },
+  {
+   "t": "cart",
+   "x": 5,
+   "z": -73.5,
+   "part": 3,
+   "mat": "MeshStandardMaterial",
+   "gap": 0.18,
+   "at": [
+    5.71,
+    -71.21
+   ],
+   "size": [
+    0.76,
+    0.65,
+    2.1
+   ]
+  },
+  {
+   "t": "shovel",
+   "x": -6.2,
+   "z": -68.3,
+   "part": 0,
+   "mat": "MeshStandardMaterial",
+   "gap": 0.07,
+   "at": [
+    -6.2,
+    -68.3
+   ],
+   "size": [
+    0.39,
+    1.37,
+    0.05
+   ]
+  },
+  {
+   "t": "brazier",
+   "x": -40.8,
+   "z": -23.4,
+   "part": 0,
+   "mat": "MeshStandardMaterial",
+   "gap": 0.45,
+   "at": [
+    -40.8,
+    -23.4
+   ],
+   "size": [
+    1.05,
+    0.6,
+    1.1
+   ]
+  },
+  {
+   "t": "rack",
+   "x": -39,
+   "z": -29,
+   "part": 4,
+   "mat": "MeshStandardMaterial",
+   "gap": 0.1,
+   "at": [
+    -39.8,
+    -29
+   ],
+   "size": [
+    0.18,
+    1.6,
+    0.05
+   ]
+  },
+  {
+   "t": "rack",
+   "x": -39,
+   "z": -29,
+   "part": 5,
+   "mat": "MeshStandardMaterial",
+   "gap": 0.1,
+   "at": [
+    -39.4,
+    -29
+   ],
+   "size": [
+    0.18,
+    1.6,
+    0.05
+   ]
+  },
+  {
+   "t": "rack",
+   "x": -39,
+   "z": -29,
+   "part": 6,
+   "mat": "MeshStandardMaterial",
+   "gap": 0.1,
+   "at": [
+    -39,
+    -29
+   ],
+   "size": [
+    0.18,
+    1.6,
+    0.05
+   ]
+  },
+  {
+   "t": "rack",
+   "x": -39,
+   "z": -29,
+   "part": 7,
+   "mat": "MeshStandardMaterial",
+   "gap": 0.1,
+   "at": [
+    -38.6,
+    -29
+   ],
+   "size": [
+    0.18,
+    1.6,
+    0.05
+   ]
+  },
+  {
+   "t": "rack",
+   "x": -39,
+   "z": -29,
+   "part": 8,
+   "mat": "MeshStandardMaterial",
+   "gap": 0.1,
+   "at": [
+    -38.2,
+    -29
+   ],
+   "size": [
+    0.18,
+    1.6,
+    0.05
+   ]
+  },
+  {
+   "t": "brazier",
+   "x": -30,
+   "z": 10,
+   "part": 0,
+   "mat": "MeshStandardMaterial",
+   "gap": 0.45,
+   "at": [
+    -30,
+    10
+   ],
+   "size": [
+    1.05,
+    0.6,
+    1.1
+   ]
+  },
+  {
+   "t": "brazier",
+   "x": -6,
+   "z": 8,
+   "part": 0,
+   "mat": "MeshStandardMaterial",
+   "gap": 0.45,
+   "at": [
+    -6,
+    8
+   ],
+   "size": [
+    1.05,
+    0.6,
+    1.1
+   ]
+  },
+  {
+   "t": "brazier",
+   "x": 22,
+   "z": 10,
+   "part": 0,
+   "mat": "MeshStandardMaterial",
+   "gap": 0.45,
+   "at": [
+    22,
+    10
+   ],
+   "size": [
+    1.05,
+    0.6,
+    1.1
+   ]
+  },
+  {
+   "t": "brazier",
+   "x": -12,
+   "z": 26,
+   "part": 0,
+   "mat": "MeshStandardMaterial",
+   "gap": 0.45,
+   "at": [
+    -12,
+    26
+   ],
+   "size": [
+    1.05,
+    0.6,
+    1.1
+   ]
+  },
+  {
+   "t": "brazier",
+   "x": 12,
+   "z": 26,
+   "part": 0,
+   "mat": "MeshStandardMaterial",
+   "gap": 0.45,
+   "at": [
+    12,
+    26
+   ],
+   "size": [
+    1.05,
+    0.6,
+    1.1
+   ]
+  },
+  {
+   "t": "rack",
+   "x": 6,
+   "z": -6,
+   "part": 4,
+   "mat": "MeshStandardMaterial",
+   "gap": 0.1,
+   "at": [
+    5.2,
+    -6
+   ],
+   "size": [
+    0.18,
+    1.6,
+    0.05
+   ]
+  },
+  {
+   "t": "rack",
+   "x": 6,
+   "z": -6,
+   "part": 5,
+   "mat": "MeshStandardMaterial",
+   "gap": 0.1,
+   "at": [
+    5.6,
+    -6
+   ],
+   "size": [
+    0.18,
+    1.6,
+    0.05
+   ]
+  },
+  {
+   "t": "rack",
+   "x": 6,
+   "z": -6,
+   "part": 6,
+   "mat": "MeshStandardMaterial",
+   "gap": 0.1,
+   "at": [
+    6,
+    -6
+   ],
+   "size": [
+    0.18,
+    1.6,
+    0.05
+   ]
+  },
+  {
+   "t": "rack",
+   "x": 6,
+   "z": -6,
+   "part": 7,
+   "mat": "MeshStandardMaterial",
+   "gap": 0.1,
+   "at": [
+    6.4,
+    -6
+   ],
+   "size": [
+    0.18,
+    1.6,
+    0.05
+   ]
+  },
+  {
+   "t": "rack",
+   "x": 6,
+   "z": -6,
+   "part": 8,
+   "mat": "MeshStandardMaterial",
+   "gap": 0.1,
+   "at": [
+    6.8,
+    -6
+   ],
+   "size": [
+    0.18,
+    1.6,
+    0.05
+   ]
+  },
+  {
+   "t": "cage",
+   "x": 26,
+   "z": 22,
+   "part": 14,
+   "mat": "MeshStandardMaterial",
+   "gap": 0.08,
+   "at": [
+    -0.19,
+    -0.65
+   ],
+   "size": [
+    0.41,
+    2.14,
+    1.32
+   ]
+  },
+  {
+   "t": "wagon",
+   "x": 42,
+   "z": 20,
+   "part": 0,
+   "mat": "MeshStandardMaterial",
+   "gap": 0.45,
+   "at": [
+    42,
+    20
+   ],
+   "size": [
+    3.4,
+    0.6,
+    1.6
+   ]
+  },
+  {
+   "t": "wagon",
+   "x": 38,
+   "z": 25,
+   "part": 0,
+   "mat": "MeshStandardMaterial",
+   "gap": 0.45,
+   "at": [
+    38,
+    25
+   ],
+   "size": [
+    1.6,
+    0.6,
+    3.4
+   ]
+  },
+  {
+   "t": "carving",
+   "x": 34.52,
+   "z": -40.5,
+   "part": 0,
+   "mat": "MeshStandardMaterial",
+   "gap": 0.65,
+   "at": [
+    34.52,
+    -40.5
+   ],
+   "size": [
+    0.1,
+    1.2,
+    1.5
+   ]
+  },
+  {
+   "t": "carving",
+   "x": -3.5,
+   "z": 32.7,
+   "part": 0,
+   "mat": "MeshStandardMaterial",
+   "gap": 0.65,
+   "at": [
+    -3.5,
+    32.7
+   ],
+   "size": [
+    0.1,
+    1.2,
+    1.5
+   ]
+  },
+  {
+   "t": "chainposts",
+   "x": 0,
+   "z": 36.4,
+   "part": 8,
+   "mat": "MeshStandardMaterial",
+   "gap": 0.78,
+   "at": [
+    -3.11,
+    36.4
+   ],
+   "size": [
+    0.18,
+    0.15,
+    0.03
+   ]
+  },
+  {
+   "t": "chainposts",
+   "x": 0,
+   "z": 36.4,
+   "part": 17,
+   "mat": "MeshStandardMaterial",
+   "gap": 0.78,
+   "at": [
+    3.11,
+    36.4
+   ],
+   "size": [
+    0.18,
+    0.15,
+    0.03
+   ]
+  }
+ ],
+ "floor": [
+  {
+   "x": -1.4,
+   "z": -40.4,
+   "walk": 0.43,
+   "seen": 0.6,
+   "d": 0.17,
+   "zone": "yard",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": -1.4,
+   "z": -39.5,
+   "walk": 1.03,
+   "seen": 1.2,
+   "d": 0.17,
+   "zone": "yard",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": 0.6,
+   "z": -40.4,
+   "walk": 0.43,
+   "seen": 0.6,
+   "d": 0.17,
+   "zone": "yard",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": 0.6,
+   "z": -39.5,
+   "walk": 1.03,
+   "seen": 1.2,
+   "d": 0.17,
+   "zone": "yard",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": -3.9,
+   "z": 30.35,
+   "walk": 0.22,
+   "seen": 1.02,
+   "d": 0.8,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": -3.9,
+   "z": 30.55,
+   "walk": 0.34,
+   "seen": 1.02,
+   "d": 0.67,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": -3.75,
+   "z": 33.71,
+   "walk": 1,
+   "seen": 1.81,
+   "d": 0.81,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": -3.9,
+   "z": 34.57,
+   "walk": 1.53,
+   "seen": 1.81,
+   "d": 0.28,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": -2.7,
+   "z": 30.35,
+   "walk": 0.22,
+   "seen": 0.4,
+   "d": 0.18,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": -3.5,
+   "z": 30.55,
+   "walk": 0.34,
+   "seen": 1.02,
+   "d": 0.67,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": -3.5,
+   "z": 33.87,
+   "walk": 1.09,
+   "seen": 1.81,
+   "d": 0.72,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": -2.7,
+   "z": 34.57,
+   "walk": 1.53,
+   "seen": 1.81,
+   "d": 0.28,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": -1.5,
+   "z": 30.35,
+   "walk": 0.22,
+   "seen": 0.4,
+   "d": 0.18,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": -1.5,
+   "z": 30.65,
+   "walk": 0.41,
+   "seen": 0.6,
+   "d": 0.19,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": -1.5,
+   "z": 34.37,
+   "walk": 1.41,
+   "seen": 1.6,
+   "d": 0.19,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": -2.3,
+   "z": 34.67,
+   "walk": 1.59,
+   "seen": 1.81,
+   "d": 0.22,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": -0.7,
+   "z": 30.35,
+   "walk": 0.22,
+   "seen": 0.4,
+   "d": 0.18,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": -0.7,
+   "z": 30.65,
+   "walk": 0.41,
+   "seen": 0.6,
+   "d": 0.19,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": -0.7,
+   "z": 34.37,
+   "walk": 1.41,
+   "seen": 1.6,
+   "d": 0.19,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": -1.25,
+   "z": 34.71,
+   "walk": 1.62,
+   "seen": 1.8,
+   "d": 0.18,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": 0.5,
+   "z": 30.35,
+   "walk": 0.22,
+   "seen": 0.4,
+   "d": 0.18,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": 0.5,
+   "z": 30.65,
+   "walk": 0.41,
+   "seen": 0.6,
+   "d": 0.19,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": 0.5,
+   "z": 34.37,
+   "walk": 1.41,
+   "seen": 1.6,
+   "d": 0.19,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": -0.25,
+   "z": 34.71,
+   "walk": 1.62,
+   "seen": 1.8,
+   "d": 0.18,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": 1.3,
+   "z": 30.35,
+   "walk": 0.22,
+   "seen": 0.4,
+   "d": 0.18,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": 1.3,
+   "z": 30.65,
+   "walk": 0.41,
+   "seen": 0.6,
+   "d": 0.19,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": 1.3,
+   "z": 34.37,
+   "walk": 1.41,
+   "seen": 1.6,
+   "d": 0.19,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": 0.75,
+   "z": 34.71,
+   "walk": 1.62,
+   "seen": 1.8,
+   "d": 0.18,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": 2.5,
+   "z": 30.35,
+   "walk": 0.22,
+   "seen": 0.4,
+   "d": 0.18,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": 2.5,
+   "z": 30.65,
+   "walk": 0.41,
+   "seen": 0.6,
+   "d": 0.19,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": 2.5,
+   "z": 34.37,
+   "walk": 1.41,
+   "seen": 1.6,
+   "d": 0.19,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": 1.75,
+   "z": 34.71,
+   "walk": 1.62,
+   "seen": 1.8,
+   "d": 0.18,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": 3.3,
+   "z": 30.35,
+   "walk": 0.22,
+   "seen": 0.4,
+   "d": 0.18,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": 3.3,
+   "z": 30.65,
+   "walk": 0.41,
+   "seen": 0.6,
+   "d": 0.19,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": 3.3,
+   "z": 34.37,
+   "walk": 1.41,
+   "seen": 1.6,
+   "d": 0.19,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": 2.75,
+   "z": 34.71,
+   "walk": 1.62,
+   "seen": 1.8,
+   "d": 0.18,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": 3.7,
+   "z": 30.35,
+   "walk": 0.22,
+   "seen": 0.4,
+   "d": 0.18,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": 3.7,
+   "z": 30.65,
+   "walk": 0.41,
+   "seen": 0.6,
+   "d": 0.19,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": 3.7,
+   "z": 34.37,
+   "walk": 1.41,
+   "seen": 1.6,
+   "d": 0.19,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": 3.75,
+   "z": 34.71,
+   "walk": 1.62,
+   "seen": 1.8,
+   "d": 0.18,
+   "zone": "stair",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": -0.75,
+   "z": 50.01,
+   "walk": 1.8,
+   "seen": 2.7,
+   "d": 0.9,
+   "zone": "block",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": -0.75,
+   "z": 49.26,
+   "walk": 1.8,
+   "seen": 2.7,
+   "d": 0.9,
+   "zone": "block",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": -0.75,
+   "z": 50.76,
+   "walk": 1.8,
+   "seen": 2.63,
+   "d": 0.83,
+   "zone": "block",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": 0,
+   "z": 49.26,
+   "walk": 1.8,
+   "seen": 2.7,
+   "d": 0.9,
+   "zone": "block",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": 0,
+   "z": 50.01,
+   "walk": 1.8,
+   "seen": 2.7,
+   "d": 0.9,
+   "zone": "block",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": 0,
+   "z": 50.76,
+   "walk": 1.8,
+   "seen": 2.7,
+   "d": 0.9,
+   "zone": "block",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": 0,
+   "z": 51.51,
+   "walk": 1.8,
+   "seen": 2,
+   "d": 0.2,
+   "zone": "block",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": 0.75,
+   "z": 49.26,
+   "walk": 1.8,
+   "seen": 2.7,
+   "d": 0.9,
+   "zone": "block",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": 0.75,
+   "z": 50.01,
+   "walk": 1.8,
+   "seen": 2.7,
+   "d": 0.9,
+   "zone": "block",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": 0.75,
+   "z": 50.76,
+   "walk": 1.8,
+   "seen": 2.63,
+   "d": 0.83,
+   "zone": "block",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": 1.5,
+   "z": 50.01,
+   "walk": 1.8,
+   "seen": 2,
+   "d": 0.2,
+   "zone": "block",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": -1.4,
+   "z": -41,
+   "walk": 0.03,
+   "seen": 0.2,
+   "d": 0.17,
+   "zone": "yard",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": -0.2,
+   "z": -41,
+   "walk": 0.03,
+   "seen": 0.2,
+   "d": 0.17,
+   "zone": "yard",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": -0.2,
+   "z": -40.4,
+   "walk": 0.43,
+   "seen": 0.6,
+   "d": 0.17,
+   "zone": "yard",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": -0.2,
+   "z": -39.5,
+   "walk": 1.03,
+   "seen": 1.2,
+   "d": 0.17,
+   "zone": "yard",
+   "mesh": "MeshStandardMaterial"
+  },
+  {
+   "x": 0.6,
+   "z": -41,
+   "walk": 0.03,
+   "seen": 0.2,
+   "d": 0.17,
+   "zone": "yard",
+   "mesh": "MeshStandardMaterial"
+  }
+ ],
+ "colliders": [
+  {
+   "t": "cart",
+   "x": 5,
+   "z": -73.5,
+   "mesh": [
+    3.67,
+    -75.29,
+    6.33,
+    -70.16
+   ],
+   "circles": [],
+   "segs": 4,
+   "flag": [],
+   "uncovered": 0.63
+  },
+  {
+   "t": "graves",
+   "x": -6,
+   "z": -75,
+   "mesh": [
+    -6.3,
+    -75.06,
+    -2.5,
+    -73.14
+   ],
+   "circles": [
+    [
+     -6,
+     -75,
+     0.12,
+     "nocam",
+     1.2,
+     ""
+    ],
+    [
+     -4.4,
+     -75,
+     0.12,
+     "nocam",
+     1.2,
+     ""
+    ],
+    [
+     -2.8,
+     -75,
+     0.12,
+     "nocam",
+     1.2,
+     ""
+    ],
+    [
+     -6,
+     -73.2,
+     0.12,
+     "nocam",
+     1.2,
+     ""
+    ],
+    [
+     -4.4,
+     -73.2,
+     0.12,
+     "nocam",
+     1.2,
+     ""
+    ],
+    [
+     -2.8,
+     -73.2,
+     0.12,
+     "nocam",
+     1.2,
+     ""
+    ]
+   ],
+   "segs": 0,
+   "flag": [],
+   "uncovered": 0.76
+  },
+  {
+   "t": "shovel",
+   "x": -6.2,
+   "z": -68.3,
+   "mesh": [
+    -6.4,
+    -68.33,
+    -6,
+    -68.27
+   ],
+   "circles": [],
+   "segs": 0,
+   "flag": [
+    "NO COLLIDER (solid >0.45 m)"
+   ],
+   "uncovered": 1
+  },
+  {
+   "t": "notice",
+   "x": -3.3,
+   "z": -63.5,
+   "mesh": [
+    -3.57,
+    -63.59,
+    -2.98,
+    -63.3
+   ],
+   "circles": [
+    [
+     -3.3,
+     -63.5,
+     0.12,
+     "nocam",
+     1.5,
+     "UNSNAGGED"
+    ]
+   ],
+   "segs": 0,
+   "flag": [
+    "COLLIDER UNSNAGGED (wall-side deco)"
+   ],
+   "uncovered": 0.02
+  },
+  {
+   "t": "lamp",
+   "x": -7.6,
+   "z": -66.5,
+   "mesh": [
+    -7.7,
+    -66.6,
+    -7.5,
+    -66.4
+   ],
+   "circles": [],
+   "segs": 0,
+   "flag": [
+    "NO COLLIDER (solid >0.45 m)"
+   ],
+   "uncovered": 1
+  },
+  {
+   "t": "gallows",
+   "x": 0,
+   "z": -36,
+   "mesh": [
+    -5.57,
+    -35.67,
+    5.57,
+    -35.33
+   ],
+   "circles": [
+    [
+     -5.4,
+     -35.5,
+     0.3,
+     "nocam",
+     6.8,
+     ""
+    ],
+    [
+     0,
+     -35.5,
+     0.3,
+     "nocam",
+     6.8,
+     ""
+    ],
+    [
+     5.4,
+     -35.5,
+     0.3,
+     "nocam",
+     6.8,
+     ""
+    ]
+   ],
+   "segs": 0,
+   "flag": [],
+   "uncovered": 0.57
+  },
+  {
+   "t": "stand",
+   "x": 14,
+   "z": -20.5,
+   "mesh": [
+    9,
+    -23,
+    19,
+    -18
+   ],
+   "circles": [],
+   "segs": 4,
+   "flag": [],
+   "uncovered": 0.51
+  },
+  {
+   "t": "torch",
+   "x": -20.6,
+   "z": -44,
+   "mesh": [
+    -20.67,
+    -44.08,
+    -20.53,
+    -43.92
+   ],
+   "circles": [
+    [
+     -20.6,
+     -44,
+     0.2,
+     "nocam",
+     3,
+     "UNSNAGGED"
+    ]
+   ],
+   "segs": 0,
+   "flag": [
+    "COLLIDER UNSNAGGED (wall-side deco)"
+   ],
+   "uncovered": 0
+  },
+  {
+   "t": "torch",
+   "x": 20.6,
+   "z": -44,
+   "mesh": [
+    20.53,
+    -44.08,
+    20.67,
+    -43.92
+   ],
+   "circles": [
+    [
+     20.6,
+     -44,
+     0.2,
+     "nocam",
+     3,
+     "UNSNAGGED"
+    ]
+   ],
+   "segs": 0,
+   "flag": [
+    "COLLIDER UNSNAGGED (wall-side deco)"
+   ],
+   "uncovered": 0
+  },
+  {
+   "t": "torch",
+   "x": -20.6,
+   "z": -24,
+   "mesh": [
+    -20.67,
+    -24.08,
+    -20.53,
+    -23.92
+   ],
+   "circles": [
+    [
+     -20.6,
+     -24,
+     0.2,
+     "nocam",
+     3,
+     "UNSNAGGED"
+    ]
+   ],
+   "segs": 0,
+   "flag": [
+    "COLLIDER UNSNAGGED (wall-side deco)"
+   ],
+   "uncovered": 0
+  },
+  {
+   "t": "torch",
+   "x": 20.6,
+   "z": -20,
+   "mesh": [
+    20.53,
+    -20.08,
+    20.67,
+    -19.92
+   ],
+   "circles": [
+    [
+     20.6,
+     -20,
+     0.2,
+     "nocam",
+     3,
+     "UNSNAGGED"
+    ]
+   ],
+   "segs": 0,
+   "flag": [
+    "COLLIDER UNSNAGGED (wall-side deco)"
+   ],
+   "uncovered": 0
+  },
+  {
+   "t": "torch",
+   "x": -3.8,
+   "z": -17.2,
+   "mesh": [
+    -3.87,
+    -17.28,
+    -3.73,
+    -17.12
+   ],
+   "circles": [
+    [
+     -3.8,
+     -17.2,
+     0.2,
+     "nocam",
+     3,
+     "UNSNAGGED"
+    ]
+   ],
+   "segs": 0,
+   "flag": [
+    "COLLIDER UNSNAGGED (wall-side deco)"
+   ],
+   "uncovered": 0
+  },
+  {
+   "t": "torch",
+   "x": 3.8,
+   "z": -17.2,
+   "mesh": [
+    3.73,
+    -17.28,
+    3.87,
+    -17.12
+   ],
+   "circles": [
+    [
+     3.8,
+     -17.2,
+     0.2,
+     "nocam",
+     3,
+     "UNSNAGGED"
+    ]
+   ],
+   "segs": 0,
+   "flag": [
+    "COLLIDER UNSNAGGED (wall-side deco)"
+   ],
+   "uncovered": 0
+  },
+  {
+   "t": "rubble",
+   "x": 23,
+   "z": -28,
+   "mesh": [
+    21.44,
+    -30.06,
+    24.41,
+    -25.69
+   ],
+   "circles": [],
+   "segs": 0,
+   "flag": [
+    "NO COLLIDER (solid >0.45 m)"
+   ],
+   "uncovered": 1
+  },
+  {
+   "t": "tower",
+   "x": -24,
+   "z": -56,
+   "mesh": [
+    -25.8,
+    -57.8,
+    -22.2,
+    -54.2
+   ],
+   "circles": [
+    [
+     -24,
+     -56,
+     2.3,
+     "cam",
+     13,
+     ""
+    ]
+   ],
+   "segs": 0,
+   "flag": [
+    "circle r2.3 overhangs mesh by 0.5"
+   ],
+   "uncovered": 0
+  },
+  {
+   "t": "tower",
+   "x": 24,
+   "z": -56,
+   "mesh": [
+    22.2,
+    -57.8,
+    25.8,
+    -54.2
+   ],
+   "circles": [
+    [
+     24,
+     -56,
+     2.3,
+     "cam",
+     12,
+     ""
+    ]
+   ],
+   "segs": 0,
+   "flag": [
+    "circle r2.3 overhangs mesh by 0.5"
+   ],
+   "uncovered": 0
+  },
+  {
+   "t": "tower",
+   "x": -24,
+   "z": -14,
+   "mesh": [
+    -25.8,
+    -15.8,
+    -22.2,
+    -12.2
+   ],
+   "circles": [
+    [
+     -24,
+     -14,
+     2.3,
+     "cam",
+     14,
+     ""
+    ]
+   ],
+   "segs": 0,
+   "flag": [
+    "circle r2.3 overhangs mesh by 0.5"
+   ],
+   "uncovered": 0
+  },
+  {
+   "t": "tower",
+   "x": 24,
+   "z": -14,
+   "mesh": [
+    22.2,
+    -15.8,
+    25.8,
+    -12.2
+   ],
+   "circles": [
+    [
+     24,
+     -14,
+     2.3,
+     "cam",
+     12,
+     ""
+    ]
+   ],
+   "segs": 0,
+   "flag": [
+    "circle r2.3 overhangs mesh by 0.5"
+   ],
+   "uncovered": 0
+  },
+  {
+   "t": "torch",
+   "x": -30,
+   "z": -31.6,
+   "mesh": [
+    -30.07,
+    -31.68,
+    -29.93,
+    -31.52
+   ],
+   "circles": [
+    [
+     -30,
+     -31.6,
+     0.2,
+     "nocam",
+     3,
+     "UNSNAGGED"
+    ]
+   ],
+   "segs": 0,
+   "flag": [
+    "COLLIDER UNSNAGGED (wall-side deco)"
+   ],
+   "uncovered": 0
+  },
+  {
+   "t": "torch",
+   "x": -46.5,
+   "z": -36.4,
+   "mesh": [
+    -46.57,
+    -36.48,
+    -46.43,
+    -36.32
+   ],
+   "circles": [
+    [
+     -46.5,
+     -36.4,
+     0.2,
+     "nocam",
+     3,
+     "UNSNAGGED"
+    ]
+   ],
+   "segs": 0,
+   "flag": [
+    "COLLIDER UNSNAGGED (wall-side deco)"
+   ],
+   "uncovered": 0
+  },
+  {
+   "t": "torch",
+   "x": -50.6,
+   "z": -20,
+   "mesh": [
+    -50.67,
+    -20.08,
+    -50.53,
+    -19.92
+   ],
+   "circles": [
+    [
+     -50.6,
+     -20,
+     0.2,
+     "nocam",
+     3,
+     "UNSNAGGED"
+    ]
+   ],
+   "segs": 0,
+   "flag": [
+    "COLLIDER UNSNAGGED (wall-side deco)"
+   ],
+   "uncovered": 0
+  },
+  {
+   "t": "torch",
+   "x": -43,
+   "z": -21.6,
+   "mesh": [
+    -43.07,
+    -21.68,
+    -42.93,
+    -21.52
+   ],
+   "circles": [
+    [
+     -43,
+     -21.6,
+     0.2,
+     "nocam",
+     3,
+     "UNSNAGGED"
+    ]
+   ],
+   "segs": 0,
+   "flag": [
+    "COLLIDER UNSNAGGED (wall-side deco)"
+   ],
+   "uncovered": 0
+  },
+  {
+   "t": "desk",
+   "x": -46,
+   "z": -24,
+   "mesh": [
+    -46.8,
+    -24.4,
+    -45.2,
+    -23.6
+   ],
+   "circles": [
+    [
+     -46,
+     -24,
+     0.8,
+     "nocam",
+     0.9,
+     ""
+    ]
+   ],
+   "segs": 0,
+   "flag": [
+    "circle r0.8 overhangs mesh by 0.4"
+   ],
+   "uncovered": 0
+  },
+  {
+   "t": "rack",
+   "x": -39,
+   "z": -29,
+   "mesh": [
+    -40.11,
+    -29.15,
+    -37.89,
+    -28.85
+   ],
+   "circles": [
+    [
+     -39,
+     -29,
+     0.8,
+     "nocam",
+     1.5,
+     ""
+    ]
+   ],
+   "segs": 0,
+   "flag": [
+    "circle r0.8 overhangs mesh by 0.65"
+   ],
+   "uncovered": 0.29
+  },
+  {
+   "t": "tower",
+   "x": -53,
+   "z": -40,
+   "mesh": [
+    -54.8,
+    -41.8,
+    -51.2,
+    -38.2
+   ],
+   "circles": [
+    [
+     -53,
+     -40,
+     2.3,
+     "cam",
+     16,
+     ""
+    ]
+   ],
+   "segs": 0,
+   "flag": [
+    "circle r2.3 overhangs mesh by 0.5"
+   ],
+   "uncovered": 0
+  },
+  {
+   "t": "desk",
+   "x": -24,
+   "z": 1.2,
+   "mesh": [
+    -24.8,
+    0.8,
+    -23.2,
+    1.6
+   ],
+   "circles": [
+    [
+     -24,
+     1.2,
+     0.8,
+     "nocam",
+     0.9,
+     ""
+    ]
+   ],
+   "segs": 0,
+   "flag": [
+    "circle r0.8 overhangs mesh by 0.4"
+   ],
+   "uncovered": 0
+  },
+  {
+   "t": "rack",
+   "x": 6,
+   "z": -6,
+   "mesh": [
+    4.89,
+    -6.15,
+    7.11,
+    -5.85
+   ],
+   "circles": [
+    [
+     6,
+     -6,
+     0.8,
+     "nocam",
+     1.5,
+     ""
+    ]
+   ],
+   "segs": 0,
+   "flag": [
+    "circle r0.8 overhangs mesh by 0.65"
+   ],
+   "uncovered": 0.29
+  },
+  {
+   "t": "cage",
+   "x": 26,
+   "z": 22,
+   "mesh": [
+    -0.4,
+    -1.31,
+    26.77,
+    23.75
+   ],
+   "circles": [
+    [
+     26,
+     22,
+     0.85,
+     "nocam",
+     2.4,
+     ""
+    ]
+   ],
+   "segs": 0,
+   "flag": [],
+   "uncovered": 1
+  },
+  {
+   "t": "leverhouse",
+   "x": 6,
+   "z": -9.6,
+   "mesh": [
+    6,
+    -10.4,
+    8.4,
+    -8.2
+   ],
+   "circles": [],
+   "segs": 4,
+   "flag": [],
+   "uncovered": 0.51
+  },
+  {
+   "t": "tower",
+   "x": -6,
+   "z": 31,
+   "mesh": [
+    -7.8,
+    29.2,
+    -4.2,
+    32.8
+   ],
+   "circles": [
+    [
+     -6,
+     31,
+     2.3,
+     "cam",
+     15,
+     ""
+    ]
+   ],
+   "segs": 0,
+   "flag": [
+    "circle r2.3 overhangs mesh by 0.5"
+   ],
+   "uncovered": 0
+  },
+  {
+   "t": "tower",
+   "x": 6,
+   "z": 31,
+   "mesh": [
+    4.2,
+    29.2,
+    7.8,
+    32.8
+   ],
+   "circles": [
+    [
+     6,
+     31,
+     2.3,
+     "cam",
+     15,
+     ""
+    ]
+   ],
+   "segs": 0,
+   "flag": [
+    "circle r2.3 overhangs mesh by 0.5"
+   ],
+   "uncovered": 0
+  },
+  {
+   "t": "candles",
+   "x": 51.4,
+   "z": -24.6,
+   "mesh": [
+    50.74,
+    -25,
+    51.83,
+    -24.02
+   ],
+   "circles": [],
+   "segs": 0,
+   "flag": [
+    "NO COLLIDER (solid >0.45 m)"
+   ],
+   "uncovered": 1
+  },
+  {
+   "t": "candles",
+   "x": 52.75,
+   "z": -28.7,
+   "mesh": [
+    52.55,
+    -28.96,
+    52.88,
+    -28.55
+   ],
+   "circles": [],
+   "segs": 0,
+   "flag": [
+    "NO COLLIDER (solid >0.45 m)"
+   ],
+   "uncovered": 1
+  },
+  {
+   "t": "belltower",
+   "x": 52,
+   "z": -46,
+   "mesh": [
+    50,
+    -48,
+    54,
+    -44
+   ],
+   "circles": [],
+   "segs": 0,
+   "flag": [
+    "NO COLLIDER (solid >0.45 m)"
+   ],
+   "uncovered": 1
+  },
+  {
+   "t": "torch",
+   "x": 34.8,
+   "z": -31.1,
+   "mesh": [
+    34.73,
+    -31.18,
+    34.87,
+    -31.02
+   ],
+   "circles": [
+    [
+     34.8,
+     -31.1,
+     0.2,
+     "nocam",
+     3,
+     "UNSNAGGED"
+    ]
+   ],
+   "segs": 0,
+   "flag": [
+    "COLLIDER UNSNAGGED (wall-side deco)"
+   ],
+   "uncovered": 0
+  },
+  {
+   "t": "skullwall",
+   "x": 45,
+   "z": -41.5,
+   "mesh": [
+    42.04,
+    -41.54,
+    48.16,
+    -41.26
+   ],
+   "circles": [],
+   "segs": 0,
+   "flag": [
+    "NO COLLIDER (solid >0.45 m)"
+   ],
+   "uncovered": 1
+  },
+  {
+   "t": "torch",
+   "x": -11,
+   "z": 41,
+   "mesh": [
+    -11.07,
+    40.92,
+    -10.93,
+    41.08
+   ],
+   "circles": [
+    [
+     -11,
+     41,
+     0.2,
+     "nocam",
+     3,
+     "UNSNAGGED"
+    ]
+   ],
+   "segs": 0,
+   "flag": [
+    "COLLIDER UNSNAGGED (wall-side deco)"
+   ],
+   "uncovered": 0
+  },
+  {
+   "t": "torch",
+   "x": 11,
+   "z": 41,
+   "mesh": [
+    10.93,
+    40.92,
+    11.07,
+    41.08
+   ],
+   "circles": [
+    [
+     11,
+     41,
+     0.2,
+     "nocam",
+     3,
+     "UNSNAGGED"
+    ]
+   ],
+   "segs": 0,
+   "flag": [
+    "COLLIDER UNSNAGGED (wall-side deco)"
+   ],
+   "uncovered": 0
+  },
+  {
+   "t": "torch",
+   "x": -3.6,
+   "z": 63,
+   "mesh": [
+    -3.67,
+    62.92,
+    -3.53,
+    63.08
+   ],
+   "circles": [
+    [
+     -3.6,
+     63,
+     0.2,
+     "nocam",
+     3,
+     "UNSNAGGED"
+    ]
+   ],
+   "segs": 0,
+   "flag": [
+    "COLLIDER UNSNAGGED (wall-side deco)"
+   ],
+   "uncovered": 0
+  },
+  {
+   "t": "torch",
+   "x": 3.6,
+   "z": 63,
+   "mesh": [
+    3.53,
+    62.92,
+    3.67,
+    63.08
+   ],
+   "circles": [
+    [
+     3.6,
+     63,
+     0.2,
+     "nocam",
+     3,
+     "UNSNAGGED"
+    ]
+   ],
+   "segs": 0,
+   "flag": [
+    "COLLIDER UNSNAGGED (wall-side deco)"
+   ],
+   "uncovered": 0
+  },
+  {
+   "t": "carving",
+   "x": 34.52,
+   "z": -40.5,
+   "mesh": [
+    34.47,
+    -41.25,
+    34.58,
+    -39.75
+   ],
+   "circles": [],
+   "segs": 0,
+   "flag": [
+    "NO COLLIDER (solid >0.45 m)"
+   ],
+   "uncovered": 1
+  },
+  {
+   "t": "greatgate",
+   "x": 0,
+   "z": 70,
+   "mesh": [
+    -6.1,
+    68.9,
+    6.1,
+    71.1
+   ],
+   "circles": [],
+   "segs": 0,
+   "flag": [
+    "NO COLLIDER (solid >0.45 m)"
+   ],
+   "uncovered": 1
+  },
+  {
+   "t": "torch",
+   "x": -3.4,
+   "z": 31.9,
+   "mesh": [
+    -3.47,
+    31.82,
+    -3.33,
+    31.98
+   ],
+   "circles": [
+    [
+     -3.4,
+     31.9,
+     0.2,
+     "nocam",
+     3,
+     "UNSNAGGED"
+    ]
+   ],
+   "segs": 0,
+   "flag": [
+    "COLLIDER UNSNAGGED (wall-side deco)"
+   ],
+   "uncovered": 0
+  },
+  {
+   "t": "deadtorch",
+   "x": 3.45,
+   "z": 31.85,
+   "mesh": [
+    3.38,
+    31.77,
+    3.52,
+    31.93
+   ],
+   "circles": [
+    [
+     3.45,
+     31.85,
+     0.2,
+     "nocam",
+     3,
+     "UNSNAGGED"
+    ]
+   ],
+   "segs": 0,
+   "flag": [
+    "COLLIDER UNSNAGGED (wall-side deco)"
+   ],
+   "uncovered": 0
+  },
+  {
+   "t": "deadtorch",
+   "x": -3.45,
+   "z": 35.5,
+   "mesh": [
+    -3.52,
+    35.42,
+    -3.38,
+    35.58
+   ],
+   "circles": [
+    [
+     -3.45,
+     35.5,
+     0.2,
+     "nocam",
+     3,
+     "UNSNAGGED"
+    ]
+   ],
+   "segs": 0,
+   "flag": [
+    "COLLIDER UNSNAGGED (wall-side deco)"
+   ],
+   "uncovered": 0
+  },
+  {
+   "t": "deadtorch",
+   "x": 3.45,
+   "z": 35.5,
+   "mesh": [
+    3.38,
+    35.42,
+    3.52,
+    35.58
+   ],
+   "circles": [
+    [
+     3.45,
+     35.5,
+     0.2,
+     "nocam",
+     3,
+     "UNSNAGGED"
+    ]
+   ],
+   "segs": 0,
+   "flag": [
+    "COLLIDER UNSNAGGED (wall-side deco)"
+   ],
+   "uncovered": 0
+  },
+  {
+   "t": "wallnotice",
+   "x": 5.6,
+   "z": 29.15,
+   "mesh": [
+    5.15,
+    29.12,
+    6.05,
+    29.18
+   ],
+   "circles": [],
+   "segs": 0,
+   "flag": [
+    "NO COLLIDER (solid >0.45 m)"
+   ],
+   "uncovered": 1
+  },
+  {
+   "t": "carving",
+   "x": -3.5,
+   "z": 32.7,
+   "mesh": [
+    -3.55,
+    31.95,
+    -3.44,
+    33.45
+   ],
+   "circles": [],
+   "segs": 0,
+   "flag": [
+    "NO COLLIDER (solid >0.45 m)"
+   ],
+   "uncovered": 1
+  },
+  {
+   "t": "chainposts",
+   "x": 0,
+   "z": 36.4,
+   "mesh": [
+    -3.67,
+    36.26,
+    3.67,
+    36.54
+   ],
+   "circles": [],
+   "segs": 0,
+   "flag": [
+    "NO COLLIDER (solid >0.45 m)"
+   ],
+   "uncovered": 1
+  }
+ ],
+ "wallGaps": [
+  {
+   "wall": 24,
+   "style": "bars",
+   "end": [
+    -41.6,
+    -37
+   ],
+   "gap": 0.4,
+   "near": 30,
+   "nearStyle": "stone"
+  },
+  {
+   "wall": 82,
+   "style": "stone",
+   "end": [
+    -3.9,
+    35.4
+   ],
+   "gap": 0.1,
+   "near": 47,
+   "nearStyle": "stone"
+  },
+  {
+   "wall": 83,
+   "style": "stone",
+   "end": [
+    3.9,
+    35.4
+   ],
+   "gap": 0.1,
+   "near": 48,
+   "nearStyle": "stone"
+  },
+  {
+   "wall": 84,
+   "style": "stone",
+   "end": [
+    -3.9,
+    64.6
+   ],
+   "gap": 0.1,
+   "near": 49,
+   "nearStyle": "stone"
+  },
+  {
+   "wall": 85,
+   "style": "stone",
+   "end": [
+    3.9,
+    64.6
+   ],
+   "gap": 0.1,
+   "near": 50,
+   "nearStyle": "stone"
+  }
+ ],
+ "reach": [
+  {
+   "nm": "lantern grave",
+   "x": 0,
+   "z": -57.5,
+   "r": 2.8,
+   "nearestReachable": 0.73,
+   "ok": true
+  },
+  {
+   "nm": "lantern gaol",
+   "x": -52.6,
+   "z": -19.5,
+   "r": 2.8,
+   "nearestReachable": 0.73,
+   "ok": true
+  },
+  {
+   "nm": "lantern stair",
+   "x": 2.2,
+   "z": 33,
+   "r": 2.8,
+   "nearestReachable": 1.22,
+   "ok": true
+  },
+  {
+   "nm": "pickup sword",
+   "x": 3.55,
+   "z": -72.35,
+   "r": 2.2,
+   "nearestReachable": 0.28,
+   "ok": true
+  },
+  {
+   "nm": "pickup tag_pell",
+   "x": -40,
+   "z": -41.4,
+   "r": 2.2,
+   "nearestReachable": 0.28,
+   "ok": true
+  },
+  {
+   "nm": "pickup tag_ilke",
+   "x": 50.2,
+   "z": -40.2,
+   "r": 2.2,
+   "nearestReachable": 0.28,
+   "ok": true
+  },
+  {
+   "nm": "pickup tag_jory",
+   "x": 44,
+   "z": 26,
+   "r": 2.2,
+   "nearestReachable": null,
+   "ok": false
+  },
+  {
+   "nm": "pickup tithe_altar",
+   "x": 53.5,
+   "z": -28,
+   "r": 2.2,
+   "nearestReachable": 0.73,
+   "ok": true
+  },
+  {
+   "nm": "note order",
+   "x": -3.3,
+   "z": -63.5,
+   "r": 2.2,
+   "nearestReachable": 0.28,
+   "ok": true
+  },
+  {
+   "nm": "note writ",
+   "x": -1.6,
+   "z": -39.3,
+   "r": 2.2,
+   "nearestReachable": 0.73,
+   "ok": true
+  },
+  {
+   "nm": "note tally",
+   "x": -46.5,
+   "z": -23,
+   "r": 2.2,
+   "nearestReachable": 0.36,
+   "ok": true
+  },
+  {
+   "nm": "note hymn",
+   "x": 35.1,
+   "z": -40.5,
+   "r": 2.2,
+   "nearestReachable": 0.36,
+   "ok": true
+  },
+  {
+   "nm": "note roll",
+   "x": -24,
+   "z": 1.5,
+   "r": 2.2,
+   "nearestReachable": 0.82,
+   "ok": true
+  },
+  {
+   "nm": "note confession",
+   "x": 0,
+   "z": 59.5,
+   "r": 2.2,
+   "nearestReachable": 0.73,
+   "ok": true
+  },
+  {
+   "nm": "note notice_odran",
+   "x": 5.6,
+   "z": 28.7,
+   "r": 2.2,
+   "nearestReachable": 0.73,
+   "ok": true
+  },
+  {
+   "nm": "note warden_rule",
+   "x": -3,
+   "z": 32.7,
+   "r": 2.2,
+   "nearestReachable": 0.36,
+   "ok": true
+  },
+  {
+   "nm": "lever yardlever",
+   "x": 4.6,
+   "z": -10.2,
+   "r": 2.2,
+   "nearestReachable": 0.73,
+   "ok": true
+  },
+  {
+   "nm": "gate yardgate",
+   "x": 0,
+   "z": -16,
+   "r": 2.6,
+   "nearestReachable": 0.14,
+   "ok": true
+  },
+  {
+   "nm": "gate gaoldoor",
+   "x": -53,
+   "z": -12,
+   "r": 2.6,
+   "nearestReachable": 0.14,
+   "ok": true
+  },
+  {
+   "nm": "gate ossgate",
+   "x": 44,
+   "z": -13,
+   "r": 2.6,
+   "nearestReachable": 0.14,
+   "ok": true
+  },
+  {
+   "nm": "gate bossfog",
+   "x": 0,
+   "z": 36,
+   "r": 2.6,
+   "nearestReachable": 0.14,
+   "ok": true
+  },
+  {
+   "nm": "gate hollowgate",
+   "x": 0,
+   "z": 70,
+   "r": 2.6,
+   "nearestReachable": 0.14,
+   "ok": true
+  },
+  {
+   "nm": "npc tamsin",
+   "x": -5.2,
+   "z": -67,
+   "r": 2.2,
+   "nearestReachable": 1.22,
+   "ok": true
+  },
+  {
+   "nm": "npc ilsabet",
+   "x": 26,
+   "z": 22,
+   "r": 2.2,
+   "nearestReachable": 1.22,
+   "ok": true
+  },
+  {
+   "nm": "npc ilsabet_wait",
+   "x": 7.2,
+   "z": 26.2,
+   "r": 2.2,
+   "nearestReachable": 0.28,
+   "ok": true
+  },
+  {
+   "nm": "npc ilsabet_gate",
+   "x": 2.6,
+   "z": 66,
+   "r": 2.2,
+   "nearestReachable": 0.28,
+   "ok": true
+  },
+  {
+   "nm": "enemy y1",
+   "x": 0,
+   "z": -48.5,
+   "r": 1.5,
+   "nearestReachable": 0,
+   "ok": true
+  },
+  {
+   "nm": "enemy y2",
+   "x": -9,
+   "z": -42,
+   "r": 1.5,
+   "nearestReachable": 0,
+   "ok": true
+  },
+  {
+   "nm": "enemy y3",
+   "x": -15,
+   "z": -30,
+   "r": 1.5,
+   "nearestReachable": 0,
+   "ok": true
+  },
+  {
+   "nm": "enemy g1",
+   "x": -28,
+   "z": -34,
+   "r": 1.5,
+   "nearestReachable": 0,
+   "ok": true
+  },
+  {
+   "nm": "enemy g3",
+   "x": -43,
+   "z": -25.5,
+   "r": 1.5,
+   "nearestReachable": 0,
+   "ok": true
+  },
+  {
+   "nm": "enemy g5",
+   "x": -53,
+   "z": -27,
+   "r": 1.5,
+   "nearestReachable": 0,
+   "ok": true
+  },
+  {
+   "nm": "enemy m1",
+   "x": 18,
+   "z": 6,
+   "r": 1.5,
+   "nearestReachable": 0,
+   "ok": true
+  },
+  {
+   "nm": "enemy m2",
+   "x": -34,
+   "z": 4,
+   "r": 1.5,
+   "nearestReachable": 0,
+   "ok": true
+  },
+  {
+   "nm": "enemy m5",
+   "x": -3,
+   "z": 24,
+   "r": 1.5,
+   "nearestReachable": 0,
+   "ok": true
+  },
+  {
+   "nm": "enemy m6",
+   "x": -8,
+   "z": 0,
+   "r": 1.5,
+   "nearestReachable": 0,
+   "ok": true
+  },
+  {
+   "nm": "enemy o1",
+   "x": 38,
+   "z": -36,
+   "r": 1.5,
+   "nearestReachable": 0,
+   "ok": true
+  },
+  {
+   "nm": "enemy sallow",
+   "x": 47,
+   "z": -30,
+   "r": 1.5,
+   "nearestReachable": 0,
+   "ok": true
+  },
+  {
+   "nm": "enemy odran",
+   "x": 0,
+   "z": 55,
+   "r": 1.5,
+   "nearestReachable": 0,
+   "ok": true
+  }
+ ],
+ "interact": [],
+ "killspots": [
+  {
+   "id": "y1",
+   "x": 0,
+   "z": -48.5,
+   "near": [],
+   "tallMeshes": [],
+   "camBlind": 0
+  },
+  {
+   "id": "y2",
+   "x": -9,
+   "z": -42,
+   "near": [],
+   "tallMeshes": [],
+   "camBlind": 0
+  },
+  {
+   "id": "y2.p0",
+   "x": -9,
+   "z": -42,
+   "near": [],
+   "tallMeshes": [],
+   "camBlind": 0
+  },
+  {
+   "id": "y2.p1",
+   "x": 9,
+   "z": -42,
+   "near": [],
+   "tallMeshes": [],
+   "camBlind": 0
+  },
+  {
+   "id": "y2.p2",
+   "x": 9,
+   "z": -29,
+   "near": [],
+   "tallMeshes": [],
+   "camBlind": 0
+  },
+  {
+   "id": "y2.p3",
+   "x": -9,
+   "z": -29,
+   "near": [],
+   "tallMeshes": [],
+   "camBlind": 0
+  },
+  {
+   "id": "y3",
+   "x": -15,
+   "z": -30,
+   "near": [],
+   "tallMeshes": [],
+   "camBlind": 0
+  },
+  {
+   "id": "g1",
+   "x": -28,
+   "z": -34,
+   "near": [
+    {
+     "kind": "wall",
+     "d": 2.55,
+     "cam": true,
+     "h": 5,
+     "at": [
+      -22,
+      -31,
+      -38,
+      -31
+     ]
+    },
+    {
+     "kind": "wall",
+     "d": 2.92,
+     "cam": false,
+     "h": 3.2,
+     "at": [
+      -26,
+      -37,
+      -39.4,
+      -37
+     ]
+    }
+   ],
+   "tallMeshes": [
+    {
+     "t": "wall:stone",
+     "d": 2.64,
+     "h": 5.6
+    },
+    {
+     "t": "wall:stone",
+     "d": 2.02,
+     "h": 3.05
+    },
+    {
+     "t": "wall:bars",
+     "d": 2.98,
+     "h": 3.2
+    },
+    {
+     "t": "wall:bars",
+     "d": -1.12,
+     "h": 3.13
+    },
+    {
+     "t": "wall:stone",
+     "d": 2.88,
+     "h": 5
+    },
+    {
+     "t": "torch",
+     "d": 2.92,
+     "h": 2.35
+    }
+   ],
+   "camBlind": 1
+  },
+  {
+   "id": "g1.p0",
+   "x": -28,
+   "z": -34,
+   "near": [
+    {
+     "kind": "wall",
+     "d": 2.55,
+     "cam": true,
+     "h": 5,
+     "at": [
+      -22,
+      -31,
+      -38,
+      -31
+     ]
+    },
+    {
+     "kind": "wall",
+     "d": 2.92,
+     "cam": false,
+     "h": 3.2,
+     "at": [
+      -26,
+      -37,
+      -39.4,
+      -37
+     ]
+    }
+   ],
+   "tallMeshes": [
+    {
+     "t": "wall:stone",
+     "d": 2.64,
+     "h": 5.6
+    },
+    {
+     "t": "wall:stone",
+     "d": 2.02,
+     "h": 3.05
+    },
+    {
+     "t": "wall:bars",
+     "d": 2.98,
+     "h": 3.2
+    },
+    {
+     "t": "wall:bars",
+     "d": -1.12,
+     "h": 3.13
+    },
+    {
+     "t": "wall:stone",
+     "d": 2.88,
+     "h": 5
+    },
+    {
+     "t": "torch",
+     "d": 2.92,
+     "h": 2.35
+    }
+   ],
+   "camBlind": 1
+  },
+  {
+   "id": "g1.p1",
+   "x": -44,
+   "z": -34,
+   "near": [
+    {
+     "kind": "wall",
+     "d": 2.71,
+     "cam": true,
+     "h": 5,
+     "at": [
+      -45,
+      -31,
+      -50,
+      -31
+     ]
+    },
+    {
+     "kind": "wall",
+     "d": 2.92,
+     "cam": false,
+     "h": 3.2,
+     "at": [
+      -41.6,
+      -37,
+      -46,
+      -37
+     ]
+    }
+   ],
+   "tallMeshes": [
+    {
+     "t": "wall:stone",
+     "d": 1.67,
+     "h": 5
+    },
+    {
+     "t": "wall:stone",
+     "d": 2.17,
+     "h": 5
+    },
+    {
+     "t": "wall:bars",
+     "d": 2.98,
+     "h": 3.2
+    },
+    {
+     "t": "wall:bars",
+     "d": 0.81,
+     "h": 3.13
+    },
+    {
+     "t": "wall:stone",
+     "d": 2.88,
+     "h": 5
+    }
+   ],
+   "camBlind": 2
+  },
+  {
+   "id": "g3",
+   "x": -43,
+   "z": -25.5,
+   "near": [],
+   "tallMeshes": [
+    {
+     "t": "wall:stone",
+     "d": -0.42,
+     "h": 5
+    },
+    {
+     "t": "wall:stone",
+     "d": -0.94,
+     "h": 5
+    }
+   ],
+   "camBlind": 3
+  },
+  {
+   "id": "g5",
+   "x": -53,
+   "z": -27,
+   "near": [
+    {
+     "kind": "wall",
+     "d": 2.55,
+     "cam": true,
+     "h": 6,
+     "at": [
+      -56,
+      -37,
+      -56,
+      -12
+     ]
+    },
+    {
+     "kind": "wall",
+     "d": 2.55,
+     "cam": true,
+     "h": 6,
+     "at": [
+      -50,
+      -31,
+      -50,
+      -12
+     ]
+    }
+   ],
+   "tallMeshes": [
+    {
+     "t": "wall:stone",
+     "d": -0.34,
+     "h": 5
+    },
+    {
+     "t": "wall:stone",
+     "d": 2.54,
+     "h": 6.6
+    },
+    {
+     "t": "wall:stone",
+     "d": 2.9,
+     "h": 4.62
+    }
+   ],
+   "camBlind": 1
+  },
+  {
+   "id": "g5.p0",
+   "x": -53,
+   "z": -30,
+   "near": [
+    {
+     "kind": "wall",
+     "d": 2.55,
+     "cam": true,
+     "h": 6,
+     "at": [
+      -56,
+      -37,
+      -56,
+      -12
+     ]
+    },
+    {
+     "kind": "wall",
+     "d": 2.55,
+     "cam": true,
+     "h": 6,
+     "at": [
+      -50,
+      -31,
+      -50,
+      -12
+     ]
+    },
+    {
+     "kind": "wall",
+     "d": 2.71,
+     "cam": true,
+     "h": 5,
+     "at": [
+      -45,
+      -31,
+      -50,
+      -31
+     ]
+    }
+   ],
+   "tallMeshes": [
+    {
+     "t": "wall:stone",
+     "d": 2.65,
+     "h": 5
+    },
+    {
+     "t": "wall:stone",
+     "d": 1.84,
+     "h": 5
+    },
+    {
+     "t": "wall:stone",
+     "d": 0.96,
+     "h": 5
+    },
+    {
+     "t": "wall:stone",
+     "d": 2.05,
+     "h": 3.81
+    }
+   ],
+   "camBlind": 2
+  },
+  {
+   "id": "g5.p1",
+   "x": -53,
+   "z": -24,
+   "near": [
+    {
+     "kind": "wall",
+     "d": 2.55,
+     "cam": true,
+     "h": 6,
+     "at": [
+      -56,
+      -37,
+      -56,
+      -12
+     ]
+    },
+    {
+     "kind": "wall",
+     "d": 2.55,
+     "cam": true,
+     "h": 6,
+     "at": [
+      -50,
+      -31,
+      -50,
+      -12
+     ]
+    }
+   ],
+   "tallMeshes": [
+    {
+     "t": "wall:stone",
+     "d": -0.06,
+     "h": 5
+    },
+    {
+     "t": "wall:stone",
+     "d": 2.55,
+     "h": 6.6
+    },
+    {
+     "t": "wall:stone",
+     "d": 1.98,
+     "h": 3.56
+    }
+   ],
+   "camBlind": 1
+  },
+  {
+   "id": "m1",
+   "x": 18,
+   "z": 6,
+   "near": [],
+   "tallMeshes": [],
+   "camBlind": 0
+  },
+  {
+   "id": "m1.p0",
+   "x": 18,
+   "z": 6,
+   "near": [],
+   "tallMeshes": [],
+   "camBlind": 0
+  },
+  {
+   "id": "m1.p1",
+   "x": 34,
+   "z": 6,
+   "near": [],
+   "tallMeshes": [],
+   "camBlind": 0
+  },
+  {
+   "id": "m1.p2",
+   "x": 34,
+   "z": 14,
+   "near": [],
+   "tallMeshes": [],
+   "camBlind": 0
+  },
+  {
+   "id": "m1.p3",
+   "x": 18,
+   "z": 14,
+   "near": [],
+   "tallMeshes": [],
+   "camBlind": 0
+  },
+  {
+   "id": "m2",
+   "x": -34,
+   "z": 4,
+   "near": [],
+   "tallMeshes": [],
+   "camBlind": 0
+  },
+  {
+   "id": "m5",
+   "x": -3,
+   "z": 24,
+   "near": [],
+   "tallMeshes": [],
+   "camBlind": 0
+  },
+  {
+   "id": "m6",
+   "x": -8,
+   "z": 0,
+   "near": [],
+   "tallMeshes": [],
+   "camBlind": 0
+  },
+  {
+   "id": "m6.p0",
+   "x": -8,
+   "z": 0,
+   "near": [],
+   "tallMeshes": [],
+   "camBlind": 0
+  },
+  {
+   "id": "m6.p1",
+   "x": -8,
+   "z": 16,
+   "near": [],
+   "tallMeshes": [],
+   "camBlind": 0
+  },
+  {
+   "id": "m6.p2",
+   "x": 4,
+   "z": 16,
+   "near": [],
+   "tallMeshes": [],
+   "camBlind": 0
+  },
+  {
+   "id": "m6.p3",
+   "x": 4,
+   "z": 0,
+   "near": [],
+   "tallMeshes": [],
+   "camBlind": 0
+  },
+  {
+   "id": "o1",
+   "x": 38,
+   "z": -36,
+   "near": [],
+   "tallMeshes": [
+    {
+     "t": "wall:bone",
+     "d": -2.44,
+     "h": 7
+    }
+   ],
+   "camBlind": 1
+  },
+  {
+   "id": "sallow",
+   "x": 47,
+   "z": -30,
+   "near": [],
+   "tallMeshes": [],
+   "camBlind": 0
+  },
+  {
+   "id": "odran",
+   "x": 0,
+   "z": 55,
+   "near": [],
+   "tallMeshes": [],
+   "camBlind": 0
+  },
+  {
+   "id": "odran.arena0",
+   "x": 0,
+   "z": 57.5,
+   "near": [],
+   "tallMeshes": [],
+   "camBlind": 0
+  },
+  {
+   "id": "odran.arena1",
+   "x": 5.3,
+   "z": 55.3,
+   "near": [],
+   "tallMeshes": [],
+   "camBlind": 0
+  },
+  {
+   "id": "odran.arena2",
+   "x": 7.5,
+   "z": 50,
+   "near": [],
+   "tallMeshes": [],
+   "camBlind": 0
+  },
+  {
+   "id": "odran.arena3",
+   "x": 5.3,
+   "z": 44.7,
+   "near": [],
+   "tallMeshes": [],
+   "camBlind": 0
+  },
+  {
+   "id": "odran.arena4",
+   "x": 0,
+   "z": 42.5,
+   "near": [],
+   "tallMeshes": [],
+   "camBlind": 0
+  },
+  {
+   "id": "odran.arena5",
+   "x": -5.3,
+   "z": 44.7,
+   "near": [],
+   "tallMeshes": [],
+   "camBlind": 0
+  },
+  {
+   "id": "odran.arena6",
+   "x": -7.5,
+   "z": 50,
+   "near": [],
+   "tallMeshes": [],
+   "camBlind": 0
+  },
+  {
+   "id": "odran.arena7",
+   "x": -5.3,
+   "z": 55.3,
+   "near": [],
+   "tallMeshes": [],
+   "camBlind": 0
+  }
+ ],
+ "lanterns": [
+  {
+   "id": "grave",
+   "g": 0,
+   "straddle": 0,
+   "spawn": [
+    -0.4,
+    -59.2
+   ],
+   "spawnG": 0,
+   "zone": "cut"
+  },
+  {
+   "id": "gaol",
+   "g": 0,
+   "straddle": 0,
+   "spawn": [
+    -53,
+    -21.2
+   ],
+   "spawnG": 0,
+   "zone": "gaol"
+  },
+  {
+   "id": "stair",
+   "g": 1,
+   "straddle": 0,
+   "spawn": [
+    -0.6,
+    32.7
+   ],
+   "spawnG": 1,
+   "zone": "stair"
+  }
+ ],
+ "gates": [
+  {
+   "id": "yardgate",
+   "kind": "portcullis",
+   "how": "lever:yardlever",
+   "g": 0,
+   "ga": 0,
+   "gb": 0,
+   "front": 0,
+   "back": 0
+  },
+  {
+   "id": "gaoldoor",
+   "kind": "door",
+   "how": "item:gaolkey",
+   "g": 0,
+   "ga": 0,
+   "gb": 0,
+   "front": 0,
+   "back": 0
+  },
+  {
+   "id": "ossgate",
+   "kind": "iron",
+   "how": "side",
+   "g": 0,
+   "ga": 0,
+   "gb": 0,
+   "front": 0,
+   "back": 0
+  },
+  {
+   "id": "bossfog",
+   "kind": "fog",
+   "how": "boss",
+   "g": 1.8,
+   "ga": 1.8,
+   "gb": 1.8,
+   "front": 1.8,
+   "back": 1.8
+  },
+  {
+   "id": "hollowgate",
+   "kind": "great",
+   "how": "item:headkey",
+   "g": 1.8,
+   "ga": 1.8,
+   "gb": 1.8,
+   "front": 1.8,
+   "back": 1.8
+  }
+ ],
+ "npcs": [
+  {
+   "id": "tamsin",
+   "g": 0,
+   "zone": "pit"
+  },
+  {
+   "id": "ilsabet",
+   "g": 0,
+   "zone": "muster"
+  },
+  {
+   "id": "ilsabet_wait",
+   "g": 0,
+   "zone": "muster"
+  },
+  {
+   "id": "ilsabet_gate",
+   "g": 1.8,
+   "zone": "hgate"
+  }
+ ],
+ "counts": {
+  "floorSamples": 13133,
+  "props": 95,
+  "statics": 2569
+ },
+ "pointIssues": [],
+ "walk": [
+  {
+   "name": "pit_to_yard",
+   "ok": true,
+   "legs": [],
+   "maxStep": 0,
+   "stepAt": null
+  },
+  {
+   "name": "gallows_climb",
+   "ok": true,
+   "legs": [],
+   "maxStep": 0.05,
+   "stepAt": [
+    0,
+    -40.1
+   ]
+  },
+  {
+   "name": "yard_to_gaol",
+   "ok": true,
+   "legs": [],
+   "maxStep": 0,
+   "stepAt": null
+  },
+  {
+   "name": "muster_to_block",
+   "ok": true,
+   "legs": [],
+   "maxStep": 0.05,
+   "stepAt": [
+    0,
+    33.86
+   ]
+  },
+  {
+   "name": "block_ring",
+   "ok": true,
+   "legs": [],
+   "maxStep": 0,
+   "stepAt": null
+  },
+  {
+   "name": "ossuary",
+   "ok": true,
+   "legs": [],
+   "maxStep": 0,
+   "stepAt": null
+  },
+  {
+   "name": "muster_loop",
+   "ok": true,
+   "legs": [],
+   "maxStep": 0,
+   "stepAt": null
+  },
+  {
+   "name": "wagon_pen",
+   "ok": true,
+   "legs": [],
+   "maxStep": 0,
+   "stepAt": null
+  }
+ ],
+ "quality": "low",
+ "errors": []
+}

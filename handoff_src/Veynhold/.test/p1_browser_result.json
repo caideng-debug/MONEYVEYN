@@ -1,0 +1,130 @@
+{
+  "when": "2026-10-23T12:38:21.700Z",
+  "totalSecs": 219.7,
+  "perf": {
+    "fps": 10,
+    "quality": "low"
+  },
+  "steps": [
+    {
+      "status": "PASS",
+      "notes": [
+        "load to title 11.6 s",
+        "localStorage keys before start: []",
+        "Continue hidden: true",
+        "quality button clicked: Quality: Medium -> low",
+        "state after New Journey click: prologue"
+      ],
+      "name": "1 fresh localStorage, load, New Journey from the title",
+      "secs": 25.9,
+      "errors": []
+    },
+    {
+      "status": "PASS",
+      "notes": [
+        "prologue line on screen: \"At dawn, the King’s Mercy was read before the court.\"",
+        "Space -> playing in 2.1 s",
+        "spawn 0.00,-73.00 zone pit",
+        "fps ~12.4"
+      ],
+      "name": "2 pass the prologue",
+      "secs": 16.4,
+      "errors": []
+    },
+    {
+      "status": "PASS",
+      "notes": [
+        "mouse drag look: yaw 0.00 -> -0.80 -> -0.00",
+        "D strafe dx -1.70",
+        "at the cart: prompt \"ETake your sword\"",
+        "weapon after E: wardblade",
+        "left the pit through the Gravedigger’s Cut: zone cut"
+      ],
+      "name": "3 walk out of the Corpse Pit with WASD + mouse look",
+      "secs": 16.2,
+      "errors": []
+    },
+    {
+      "status": "PASS",
+      "notes": [
+        "walk ok true, prompt \"ETalk to Tamsin\"",
+        "E -> dialogue: \"Stay down, stay down — oh, gods. You’re breathing. You were …\"",
+        "advanced with 4 E presses + 2 choice clicks; state playing; flags {\"met\":true,\"names\":0,\"main\":1}"
+      ],
+      "name": "4 talk to Tamsin (E), advance and close the dialogue",
+      "secs": 20,
+      "errors": []
+    },
+    {
+      "status": "PASS",
+      "notes": [
+        "zone now cut at -0.0,-59.3",
+        "prompt \"EKindle the Vigil Lantern\"",
+        "kindled -> playing again after 4.0 s; save {\"lit\":[\"grave\"],\"lantern\":\"grave\",\"main\":3}"
+      ],
+      "name": "5 find and rest at the first lantern",
+      "secs": 20,
+      "errors": []
+    },
+    {
+      "status": "PASS",
+      "notes": [
+        "nearest foe y1 at 0.0,-48.5 (idle)",
+        "fight 42 s; enemy swings seen 2; player blocks 2, deflects 0; enemy hp 70 -> 12; player hp 64; deaths 1 -> 1"
+      ],
+      "name": "6 engage a field enemy, block/deflect, damage or kill it",
+      "secs": 59,
+      "errors": []
+    },
+    {
+      "status": "PASS",
+      "notes": [
+        "Esc -> paused (menu display block)",
+        "Journey: ok (2531 ms) \"WREN ALDMOOR — THE UNHANGED Health 64 / 100 Posture 100 max Lantern Dr\"",
+        "Inventory: ok (2395 ms) \"ITEMS Lantern Draught ×3 Warm lamp-oil and wine, blessed by no one. Re\"",
+        "Quests: ok (2532 ms) \"THE ROPE THAT BROKE The yard’s north gate is barred from the far side.\"",
+        "Lore: ok (1231 ms) \"WRITINGS FOUND Nothing read yet.\"",
+        "Map: ok (2525 ms) \"Only places you have walked are drawn. ◆ lantern (gold = kindled) · ▲ \"",
+        "Settings: ok (2497 ms) \"DISPLAY Quality (Low / Medium / High; drops one step automatically if \"",
+        "Controls: ok (1242 ms) \"EXPLORE W A S D Move · Shift sprint Mouse Camera (click the screen to \"",
+        "inventory lists the sword + draughts: true; quests list Names for the Dead: true",
+        "music volume 1 -> 0.28 (slider 28, stored 0.28)"
+      ],
+      "name": "7 pause menu: click every tab (Inventory, Quests…), change a volume setting",
+      "secs": 22.4,
+      "errors": []
+    },
+    {
+      "status": "PASS",
+      "notes": [
+        "Esc closes the menu -> playing",
+        "title Continue: block \"Chapter I — The Execution Grounds · 0 min\"",
+        "position after Continue -0.40,-59.20 (expected the Gravedigger’s Lantern spawn -0.40,-59.20; the save stores the lantern, not the exact spot)",
+        "before {\"lantern\":\"grave\",\"lit\":[\"grave\"],\"met\":true,\"weapon\":\"wardblade\",\"main\":3,\"names\":0}",
+        "after {\"lantern\":\"grave\",\"lit\":[\"grave\"],\"met\":true,\"weapon\":\"wardblade\",\"main\":3,\"names\":0,\"musicVol\":0.28,\"quality\":\"low\"}"
+      ],
+      "name": "8 close menu, reload, Continue; position, flags, settings persisted",
+      "secs": 31.1,
+      "errors": []
+    },
+    {
+      "status": "PASS",
+      "notes": [
+        "800x500: camera aspect 1.600 (want 1.600), canvas 800x500, state playing, objective box right edge 386 / 800",
+        "1366x768: camera aspect 1.779 (want 1.779), canvas 1366x768, state playing, objective box right edge 386 / 1366"
+      ],
+      "name": "9 resize to 800x500 and 1366x768, no errors",
+      "secs": 8.2,
+      "errors": []
+    },
+    {
+      "name": "10 no console errors or page errors throughout",
+      "status": "PASS",
+      "notes": [
+        "0 console errors, 0 page errors over 219.5 s"
+      ],
+      "secs": 0
+    }
+  ],
+  "errors": []
+}
